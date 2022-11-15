@@ -1,0 +1,28 @@
+/*  Переменные со шрифтами  */
+$accent-font: 'Roboto', sans-serif;;
+
+/*  Переменные с гарнитурами шрифтов  */
+$thin:					100;
+$light:					300;
+$regular:				400;
+$medium:				500;
+$bold:					700;
+
+/* Настройки оснвоно шрифта */
+$mainFontSize: 			14px;
+$mainLineHeight:		16px;
+$mainFontColor:			#000;
+$mainFontWeight:		$regular;
+
+/* Основные цвета */
+$textColor: 			#1C294D;
+
+$accent-color:			#f4b600;
+$secondary-color: 		#6a7678;
+
+/* Разрешения */
+$mobile:				768px;
+$tablet:				769px;
+$desktop:				1024px;
+$widescreen:			1180px;
+$fullhd:				1408px;

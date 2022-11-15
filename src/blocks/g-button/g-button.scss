@@ -1,0 +1,12 @@
+.g-button, input.g-button
+{
+	display: inline-block;
+	font-size: 14px;
+	line-height: 18px;
+	color: #fff;
+	padding: 10px 25px;
+	border:0px;
+	cursor: pointer;
+
+	&:hover{background-color: rgba(103, 115, 135, 0.7);}
+}
