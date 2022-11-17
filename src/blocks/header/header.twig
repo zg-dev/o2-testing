@@ -24,25 +24,11 @@
 					</a>
 				</li>
 			</ul>
-			<ul class="header-top__contacts-list">
-				<li class="header-top__contacts-list-item">
-					<a href="mailto:market@estatut.ru" class="header-top__contacts-list-link">
-						{% include '/assets/svg/mail.svg' %}
-						<span>market@estatut.ru</span>
-					</a>
-				</li>
-				<li class="header-top__contacts-list-item">
-					<a href="call:+79686606550" class="header-top__contacts-list-link">
-						{% include '/assets/svg/phone.svg' %}
-						<span>8 (968) 660-65-50</span>
-					</a>
-				</li>
-				<li class="header-top__contacts-list-item">
-					<a href="#" id="header-top__info-icon" class="header-top__contacts-list-link">
-						{% include '/assets/svg/info.svg' %}
-					</a>
-				</li>
-			</ul>
+
+			<div class="header-top__contacts-list-wrapper">
+				{% include 'blocks/contacts/contacts.twig' %}
+			</div>
+
 		</div>
 
 		<div class="header-mid">

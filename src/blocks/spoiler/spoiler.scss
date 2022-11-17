@@ -1,0 +1,71 @@
+// spoiler styles
+.footer-mid__spoiler-block-wrapper
+{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 750px;
+	& > * + * {margin-left: 30px;}
+
+	@media (max-width:768px)
+	{
+		flex-direction: column;
+		& > * {margin-left: unset;}
+	}
+}
+.spoiler__item-title
+{
+	margin-bottom: 24px;
+	font-weight: $medium;
+	line-height: 20px;
+	color: $textColor;
+
+	@media (max-width:768px)
+	{
+		margin-bottom: 0;
+		padding: 20px 0;
+		border-bottom: 1px solid rgba(42, 61, 72, 0.15);
+		position: relative;
+		font-weight: $mainFontWeight;
+		font-size: 16px;
+
+		&::after
+		{
+			content: url('../svg/chevron.svg');
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%) rotate(90deg);
+		}
+	}
+
+}
+.spoiler__list
+{
+	line-height: 20px;
+
+	@media (max-width:768px)
+	{
+		display: none;
+	}
+}
+.spoiler__list-item + .spoiler__list-item {margin-top: 15px;}
+.spoiler__list-item-link
+{
+	display: flex;
+	align-items: center;
+
+	& svg {flex-shrink: 0;}
+}
+.link-download__wrapper
+{
+	display: flex;
+	flex-direction: column;
+	margin-left: 5px;
+}
+.link-download__wrapper-subtext
+{
+	font-size: 12px;
+	line-height: 15px;
+	color: rgba(40, 47, 54, 0.5);
+}
