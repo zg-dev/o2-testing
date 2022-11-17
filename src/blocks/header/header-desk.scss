@@ -2,7 +2,15 @@
 {
 	padding: 15px 0 20px 0;
 	background-color: #fff;
+
 }
+.header__desktop-wrapper
+{
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+
 .decor-line
 {
 	position: absolute;
@@ -71,8 +79,8 @@
 	margin-bottom: 20px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
-
 .header-mid__left-side
 {
 	display: flex;
@@ -96,7 +104,6 @@
 	margin-left: 30px;
 	display: flex;
 	align-items: center;
-
 }
 .input-search
 {
@@ -132,6 +139,11 @@
 	color: #FFFFFF;
 
 	& span {margin-left: 5px;}
+
+	.search-icon
+	{
+		fill: #ffffff;
+	}
 }
 
 .header-mid__links-list 
@@ -168,8 +180,13 @@
 		text-align: center;
 		color: #FFFFFF;
 	}
-}
 
+	.cart-icon
+	{
+		height: 20px;
+		width: 20px;
+	}
+}
 
 .header-bottom__links-list
 {
