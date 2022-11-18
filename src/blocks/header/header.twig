@@ -1,59 +1,57 @@
 <header class="header">
 
-	<div class="header__desktop-wrapper">
+	<div class="header__desktop">
 		<div class="decor-line"></div>
 		<div class="container">
 
-			<div class="header-top">
-				<ul class="header-top__links-list">
-					<li class="header-top__links-list-item">
-						<a href="" class="header-top__links-list-link">
+			<div class="header__top">
+				<ul class="header__top-leftside">
+					<li>
+						<a href="#" class="header__top-leftside-link">
 							{% include '/assets/svg/geo.svg' %}
 							<span>Москва</span>
 						</a>
 					</li>
-					<li class="header-top__links-list-item">
-						<a href="" class="header-top__links-list-link">
+					<li>
+						<a href="#" class="header__top-leftside-link">
 							{% include '/assets/svg/shipping.svg' %}
 							<span>Доставка и оплата</span>
 						</a>
 					</li>
-					<li class="header-top__links-list-item">
-						<a href="" class="header-top__links-list-link">
+					<li>
+						<a href="#" class="header__top-leftside-link">
 							{% include '/assets/svg/adress.svg' %}
 							<span>Адрес и часы работы</span>
 						</a>
 					</li>
 				</ul>
-				<ul class="header-top__contacts-list">
-					<li class="header-top__contacts-list-item">
-						<a href="mailto:market@estatut.ru" class="header-top__contacts-list-link">
+				<ul class="header__top-rightside">
+					<li>
+						<a href="mailto:market@estatut.ru" class="header__top-rightside-link">
 							{% include '/assets/svg/mail.svg' %}
 							<span>market@estatut.ru</span>
 						</a>
 					</li>
-					<li class="header-top__contacts-list-item">
-						<a href="call:+79686606550" class="header-top__contacts-list-link">
+					<li>
+						<a href="call:+79686606550" class="header__top-rightside-link">
 							{% include '/assets/svg/phone.svg' %}
 							<span>8 (968) 660-65-50</span>
 						</a>
 					</li>
-					<li class="header-top__contacts-list-item">
-						<a href="#" id="header-top__info-icon" class="header-top__contacts-list-link">
+					<li>
+						<a href="#" id="info-icon" class="header__top-rightside-link">
 							{% include '/assets/svg/info.svg' %}
 						</a>
 					</li>
 				</ul>
 			</div>
 
-			<div class="header-mid">
-				<div class="header-mid__mobile-popup">
-					{% include "/assets/svg/burger.svg" %}
-				</div>
-				<div class="header-mid__left-side">
-					<div class="header-mid__logo-wrapper">
+			<div class="header__mid">
+				
+				<div class="header__mid-leftside">
+					<div class="header__mid-logo">
 						<div class="logo">
-							<a href="#" class="logo">
+							<a href="#" class="logo__link">
 								<div class="logo__img-wrap">
 									<picture>
 										<source srcset="img/logostatut.webp" type="image/webp">
@@ -71,21 +69,22 @@
 						</button>
 					</form>
 				</div>
-				<ul class="header-mid__links-list">
-					<li class="header-mid__links-list-item">
-						<a href="#" class="header-mid__link">
+				
+				<ul class="header__mid-rightside">
+					<li>
+						<a href="#" class="header__mid-rightside-link">
 							{% include '/assets/svg/bookmark.svg' %}
 							<span>Отложено</span>
 						</a>
 					</li>
-					<li class="header-mid__links-list">
-						<a href="#" class="header-mid__link">
+					<li>
+						<a href="#" class="header__mid-rightside-link">
 							{% include '/assets/svg/smile.svg' %}
 							<span>Войти</span>
 						</a>
 					</li>
-					<li class="header-mid__links-list-item">
-						<a href="#" class="header-mid__link header-mid__link--count">
+					<li>
+						<a href="#" class="header__mid-rightside-link header__mid-rightside-link--count">
 							{% include '/assets/svg/cart.svg' %}
 							<span>Корзина</span>
 						</a>
@@ -94,37 +93,37 @@
 
 			</div>
 
-			<div class="header-bottom">
-				<ul class="header-bottom__links-list">
-					<li class="header-bottom__links-list-item">
-						<a href="#" class="header-bottom__link">
+			<div class="header__bottom">
+				<ul class="header__bottom-list">
+					<li>
+						<a href="#" class="header__bottom-link">
 							{% include '/assets/svg/burger.svg' %}
 							<span>Каталог</span>
 						</a>
 					</li>
-					<li class="header-bottom__links-list-item">
-						<a href="#" class="header-bottom__link">
+					<li>
+						<a href="#" class="header__bottom-link">
 							<span>Авторы</span>
 						</a>
 					</li>
-					<li class="header-bottom__links-list-item">
-						<a href="#" class="header-bottom__link">
+					<li>
+						<a href="#" class="header__bottom-link">
 							<span>Новинки</span>
 						</a>
 					</li>
-					<li class="header-bottom__links-list-item">
-						<a href="#" class="header-bottom__link header-bottom__link--link-red">
+					<li>
+						<a href="#" class="header__bottom-link header__bottom-link--red-link">
 							{% include '/assets/svg/sale.svg' %}
 							<span>Скидки</span>
 						</a>
 					</li>
-					<li class="header-bottom__links-list-item">
-						<a href="#" class="header-bottom__link">
+					<li>
+						<a href="#" class="header__bottom-link">
 							<span>Партнёрам</span>
 						</a>
 					</li>
-					<li class="header-bottom__links-list-item">
-						<a href="#" class="header-bottom__link">
+					<li>
+						<a href="#" class="header__bottom-link">
 							<span>Мы</span>
 						</a>
 					</li>
@@ -135,45 +134,37 @@
 	</div>
 
 
-	<div class="header__mobile-wrapper">
+	<div class="header__mobile container">
 
-		<div class="container">
+		<div class="header__mobile-burger">
+			{% include '/assets/svg/burger.svg' %}				
+		</div>
 
-			<div class="header__mob-content-wrapper">
-
-				<div class="header-mob__burger-menu">
-					{% include '/assets/svg/burger.svg' %}				
-				</div>
-
-				<div class="header-mob__logo-wrapper">
-					<div class="logo__wrapper">
-						<a href="#" class="logo">
-							<div class="logo__img-wrap">
-								<picture>
-									<source srcset="img/logostatut.webp" type="image/webp">
-									<img src="img/logostatut.png" alt="Logo" width="57px">
-								</picture>
-							</div>
-						</a>
+		<div class="header__mobile-logo">
+			<div class="logo">
+				<a href="#" class="logo__link">
+					<div class="logo__img-wrap">
+						<picture>
+							<source srcset="img/logostatut.webp" type="image/webp">
+							<img src="img/logostatut.png" alt="Logo">
+						</picture>
 					</div>
-				</div>
-
-				<div class="header-mob__search-form-wrapper">
-					<form action="submit" class="header-mob__search-form">
-						<input type="text" class="header-mob__search-form__input" placeholder="Что будем искать?">
-						<button class="header-mob__search-form__button">
-							{% include '/assets/svg/search.svg' %}
-						</button>
-					</form>
-				</div>
-
-
-				<div class="header-mob__cart-menu header-mob__cart-menu--count">
-					{% include '/assets/svg/cart.svg' %}
-				</div>
-
+				</a>
 			</div>
+		</div>
 
+		<div class="header__mobile-search-form">
+			<form action="submit" class="search-form">
+				<input type="text" class="search-form__input" placeholder="Что будем искать?">
+				<button class="search-form__button">
+					{% include '/assets/svg/search.svg' %}
+				</button>
+			</form>
+		</div>
+
+
+		<div class="header__mobile-cart header__mobile-cart--count">
+			{% include '/assets/svg/cart.svg' %}
 		</div>
 
 	</div>
