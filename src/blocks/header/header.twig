@@ -1,137 +1,85 @@
 <header class="header">
-
-	<div class="header__desktop">
-		<div class="decor-line"></div>
-		<div class="container">
-
-			<div class="header__top">
-				<ul class="header__top-leftside">
-					<li>
-						<a href="#" class="header__top-leftside-link">
-							{% include '/assets/svg/geo.svg' %}
-							<span>Москва</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="header__top-leftside-link">
-							{% include '/assets/svg/shipping.svg' %}
-							<span>Доставка и оплата</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="header__top-leftside-link">
-							{% include '/assets/svg/adress.svg' %}
-							<span>Адрес и часы работы</span>
-						</a>
-					</li>
-				</ul>
-				<ul class="header__top-rightside">
-					<li>
-						<a href="mailto:market@estatut.ru" class="header__top-rightside-link">
-							{% include '/assets/svg/mail.svg' %}
-							<span>market@estatut.ru</span>
-						</a>
-					</li>
-					<li>
-						<a href="call:+79686606550" class="header__top-rightside-link">
-							{% include '/assets/svg/phone.svg' %}
-							<span>8 (968) 660-65-50</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" id="info-icon" class="header__top-rightside-link">
-							{% include '/assets/svg/info.svg' %}
-						</a>
-					</li>
-				</ul>
+	
+	<div class="header__top container">
+		<div class="header__top-leftside">
+			<div class="header__city">
+				<a href="#" class="header__top-link">
+					{% include '/assets/svg/geo.svg' %}
+					<span>Москва</span>
+				</a>
 			</div>
-
-			<div class="header__mid">
-				
-				<div class="header__mid-leftside">
-					<div class="header__mid-logo">
-						<div class="logo">
-							<a href="#" class="logo__link">
-								<div class="logo__img-wrap">
-									<picture>
-										<source srcset="img/logostatut.webp" type="image/webp">
-										<img src="img/logostatut.png" alt="Logo" width="57px">
-									</picture>
-								</div>
-							</a>
-						</div>
-					</div>
-					<form action="" class="search-form">
-						<input type="text" class="input-search" placeholder="Автор, название, ISBN">
-						<button class="button-search">
-							{% include '/assets/svg/search.svg' %}
-							<span>Искать</span>
-						</button>
-					</form>
-				</div>
-				
-				<ul class="header__mid-rightside">
-					<li>
-						<a href="#" class="header__mid-rightside-link">
-							{% include '/assets/svg/bookmark.svg' %}
-							<span>Отложено</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="header__mid-rightside-link">
-							{% include '/assets/svg/smile.svg' %}
-							<span>Войти</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="header__mid-rightside-link header__mid-rightside-link--count">
-							{% include '/assets/svg/cart.svg' %}
-							<span>Корзина</span>
-						</a>
-					</li>
-				</ul>
-
+			<div class="header__shipping">
+				<a href="#" class="header__top-link">
+					{% include '/assets/svg/shipping.svg' %}
+					<span>Доставка и оплата</span>
+				</a>
 			</div>
-
-			<div class="header__bottom">
-				<ul class="header__bottom-list">
-					<li>
-						<a href="#" class="header__bottom-link">
-							{% include '/assets/svg/burger.svg' %}
-							<span>Каталог</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="header__bottom-link">
-							<span>Авторы</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="header__bottom-link">
-							<span>Новинки</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="header__bottom-link header__bottom-link--red-link">
-							{% include '/assets/svg/sale.svg' %}
-							<span>Скидки</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="header__bottom-link">
-							<span>Партнёрам</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="header__bottom-link">
-							<span>Мы</span>
-						</a>
-					</li>
-				</ul>
+			<div class="header__adress">
+				<a href="#" class="header__top-link">
+					{% include '/assets/svg/adress.svg' %}
+					<span>Адрес и часы работы</span>
+				</a>
 			</div>
-
+		</div>
+		<div class="header__top-rightside">
+			{% include 'blocks/contacts/contacts.twig' with {'class': "contacts contacts--header"} %}
 		</div>
 	</div>
+
+	<div class="header__bottom container">
+		<div class="header__bottom-wrapper">
+			<div class="header__bottom-leftside">
+				{% include "blocks/logo/logo.twig" %}
+				
+				<div class="search-form__wrapper">
+					{% include "blocks/search-form/search-form.twig" %}
+					
+				</div>
+			</div>
+
+			<div class="header__bottom-rightside">
+				{% include "blocks/profile/profile.twig" %}
+			</div>
+		</div>
+
+		<div class="header__nav">
+			<ul class="header__nav-list">
+				<li class="header__nav-list-item">
+					<a href="#" class="header__nav-link">
+						{% include '/assets/svg/burger.svg' %}
+						<span>Каталог</span>	
+					</a>
+				</li>
+				<li class="header__nav-list-item">
+					<a href="#" class="header__nav-link">
+						<span>Авторы</span>
+					</a>
+				</li>
+				<li class="header__nav-list-item">
+					<a href="#" class="header__nav-link">
+						<span>Новинки</span>
+					</a>
+				</li>
+				<li class="header__nav-list-item">
+					<a href="#" class="header__nav-link header__nav-link--red-link">
+						{% include '/assets/svg/sale.svg' %}
+						<span>Скидки</span>
+					</a>
+				</li>
+				<li class="header__nav-list-item">
+					<a href="#" class="header__nav-link">
+						<span>Партнёрам</span>
+					</a>
+				</li>
+				<li class="header__nav-list-item">
+					<a href="#" class="header__nav-link">
+						<span>Мы</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
 
 
 	<div class="header__mobile container">
@@ -141,25 +89,11 @@
 		</div>
 
 		<div class="header__mobile-logo">
-			<div class="logo">
-				<a href="#" class="logo__link">
-					<div class="logo__img-wrap">
-						<picture>
-							<source srcset="img/logostatut.webp" type="image/webp">
-							<img src="img/logostatut.png" alt="Logo">
-						</picture>
-					</div>
-				</a>
-			</div>
+			{% include "blocks/logo/logo.twig" %}
 		</div>
 
 		<div class="header__mobile-search-form">
-			<form action="submit" class="search-form">
-				<input type="text" class="search-form__input" placeholder="Что будем искать?">
-				<button class="search-form__button">
-					{% include '/assets/svg/search.svg' %}
-				</button>
-			</form>
+			{% include "blocks/search-form/search-form.twig" %}
 		</div>
 
 
@@ -167,6 +101,6 @@
 			{% include '/assets/svg/cart.svg' %}
 		</div>
 
-	</div>
+	</div> 
 
 </header>

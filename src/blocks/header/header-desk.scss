@@ -1,37 +1,36 @@
 .header
 {
-	padding: 15px 0 20px 0;
-	background-color: #fff;
+	padding-top: 15px;
+	padding-bottom: 20px;
 
-}
-.header__desktop
-{
-	@media (max-width: 768px) {
-		display: none;
-	}
-}
-
-.decor-line
-{
-	position: absolute;
-	top: 50px;
-	z-index: 99;
 	width: 100%;
-	border-bottom: 1px solid #DFE0E1;
-}
-
-
-.header__top
-{
-	margin-bottom: 37px;
-	display: flex;
-	justify-content: space-between;
+	background-color: #fff;
 
 	font-family: $accent-font;
 	font-weight: $regular;
 	font-size: $mainFontSize;
 	line-height: $mainLineHeight;
 	color: rgba(28, 41, 77, 0.8);
+
+	@media (max-width: 768px) {
+		padding-bottom: 15px;
+		border-bottom: 1px solid #ECECEC;
+	}
+}
+
+
+.header__top
+{
+	padding-bottom: 15px;
+
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #DFE0E1;
+
+	@media (max-width: 768px) {
+		display: none;
+		border-bottom: none;
+	}
 }
 .header__top-leftside
 {
@@ -41,154 +40,51 @@
 
 	& > * + * {margin-left: 30px;}
 }
-.header__top-leftside-link
+.header__top-link
 {
 	display: flex;
 	align-items: center;
 
-	& > * + * {margin-left: 5px;}
-}
-
-.header__top-rightside
-{
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-
-	font-weight: $medium;
-	line-height: 17px;
-
-	& > * + * {margin-left: 30px;}
-}
-.header__top-rightside li
-{
-	& > * + * {margin-left: 5px;}
-	&:last-child {margin-left: 5px;}
-}
-.header__top-rightside-link
-{
-	display: flex;
-	align-items: center;
-
-	& > * + * {margin-left: 5px;}
+	& span {margin-left: 5px;}
 }
 
 
-.header__mid
+.header__bottom
 {
-	margin-bottom: 20px;
+	padding-top: 20px;
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+.header__bottom-wrapper
+{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
-.header__mid-leftside
-{
-	display: flex;
-	align-items: center;
-	
-	.logo__img-wrap 
-	{
-		height: 40px;
-		width: 50px;
-	
-		img 
-		{
-			width: 100%;
-			height: auto;
-		}
-	}
-	.search-form
-	{
-		width: 573px;
-		margin-left: 30px;
-		display: flex;
-		align-items: center;
-	}
-	.input-search
-	{
-		height: 40px;
-		width: 450px;
-		padding: 10px 15px;
-		border: 1px solid #DFE0E1;
-		border-right: 0;
-		border-radius: 5px 0 0 5px;
-	
-		font-family: $accent-font;
-		font-weight: $mainFontWeight;
-		font-size: $mainFontSize;
-		line-height: 20px;
-		color: $textColor;
-	
-		&::placeholder{color: rgba(28, 41, 77, 0.5)}
-	}
-	.button-search
-	{
-		display: flex;
-		align-items: center;
-		padding-left: 25px;
-		padding-right: 25px;
-		border: #FF7A00;
-		border-radius: 0 5px 5px 0 ;
-		background-color: #FF7A00;
-	
-		font-family: $accent-font;
-		font-weight: $medium;
-		font-size: $mainFontSize;
-		line-height: 40px;
-		color: #FFFFFF;
-	
-		& span {margin-left: 5px;}
-	
-		.search-icon
-		{
-			fill: #ffffff;
-		}
-	}
-}
 
-.header__mid-rightside
+	margin-bottom: 20px;
+}
+.header__bottom-leftside
 {
+	width: 100%;
 	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-
+	justify-content: flex-start;
 	&> * + * {margin-left: 30px;}
 }
-.header__mid-rightside-link
+
+.search-form__wrapper
 {
-	display: flex;
-	align-items: center;
-	position: relative;
-
-	&> * + * {margin-left: 5px;}
-	
-	&--count::after
-	{	
-		content: "10";
-		position: absolute;
-		top: -7px;
-    	left: 12px;
-		width: 15px;
-		height: 15px;
-		border-radius: 50%;
-		background-color: #FF7A00;
-
-		font-family: $accent-font;
-		font-weight: $medium;
-		font-size: 9px;
-		line-height: 15px;
-		text-align: center;
-		color: #FFFFFF;
-	}
-
-	.cart-icon
-	{
-		height: 20px;
-		width: 20px;
-	}
+	width: 100%;
+	max-width: 573px;
 }
 
-.header__bottom-list
+.header__nav
+{
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+.header__nav-list
 {
 	display: flex;
 	justify-content: flex-start;
@@ -196,16 +92,17 @@
 
 	& > * + * {margin-left: 25px;}
 }
-.header__bottom-link
+.header__nav-list-item {
+}
+.header__nav-link 
 {
 	display: flex;
 	align-items: center;
 
-	&--red-link > *
-	{
-		color: #FF283D;
-		fill: #FF283D;
-	}
-
 	& > * + * {margin-left: 5px;}
+}
+.header__nav-link--red-link > *
+{
+	color: #FF283D;
+	fill: #FF283D;
 }

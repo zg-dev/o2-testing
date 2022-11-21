@@ -1,0 +1,65 @@
+.contacts
+{
+	font-family: $accent-font;
+	font-weight: $medium;
+	font-size: $mainFontSize;
+	line-height: $mainLineHeight;
+	color: rgba(28, 41, 77, 0.8);
+
+	&--header {
+		display: flex;
+		justify-content: flex-end;
+
+		& > * + * {margin-left: 30px;}
+	}
+}
+
+.contacts__link 
+{
+	display: flex;
+	align-items: center;
+
+	& span {margin-left: 5px;}
+}
+.contacts__phone
+{
+	display: flex;
+	align-items: center;
+}
+.contacts__link-info 
+{
+	margin-left: 5px;
+	height: 20px;
+}
+
+
+// всплывающая подсказка для номера телефона
+[data-tooltip] {position: relative;}
+[data-tooltip]::after
+{
+content: attr(data-tooltip);
+position: absolute;
+width: 200px;
+top: 0;
+right: 0;
+background: #c1ccd5;
+color: #fff;
+padding: 15px;
+border-radius: 5px;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+pointer-events: none;
+opacity: 0;
+transition: 0.5s;
+
+font-family: $accent-font;
+font-weight: $medium;
+font-size: $mainFontSize;
+line-height: $mainLineHeight;
+color: rgba(28, 41, 77, 0.8);
+
+} 
+[data-tooltip]:hover::after
+{
+opacity: 1;
+top: 25px;
+}

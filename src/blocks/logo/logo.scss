@@ -1,0 +1,19 @@
+.logo {
+}
+.logo__link {
+}
+.logo__img--mobile
+{
+
+}
+.logo__img
+{
+	height: 40px;
+	width: 50px;
+
+	@media (max-width: 768px)
+	{
+		height: 35px;
+		width: 40px;	
+	}
+}
