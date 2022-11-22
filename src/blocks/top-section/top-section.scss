@@ -4,7 +4,7 @@
 	grid-gap: 30px;
 	grid-template-columns: 
   repeat(3, minmax(300px, 1fr));
-	grid-template-rows: 350px 140px;
+	grid-template-rows: minmax(auto, 350px) minmax(140px, auto);
 
 }
 
@@ -33,19 +33,56 @@
 }
 .day-book__bookmark {
 }
-.promo-card {
+
+
+.promo-card
+{
+	padding: 20px 25px;
+	border-radius: 5px;
+	overflow: hidden;
+	position: relative;
+
+	font-family: 'Gosha Sans', sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 25px;
 }
-.card__sipping
+.card__shipping
 {
 	grid-column: 1;
 	grid-row: 2;
-}
-.promo-card__text {
-}
-.promo-card__img {
+
+	background-color: #6D378F;
+	color: #FFFFFF;
+
+	& svg
+	{
+		position: absolute;
+		top: 34px;
+		left: 12px;
+	}
 }
 .card__sign-up
 {
 	grid-column: 2;
 	grid-row: 2;
+
+	background-color: #FFD8EF;
+	color: #494C6D;
+
+	& svg
+	{
+		position: absolute;
+		top: 84px;
+		left: 48px;
+	}
+}
+.promo-card__content
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	z-index: 1;
 }

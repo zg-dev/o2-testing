@@ -47,4 +47,14 @@
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
+
+	font-family: 'GoshaSans', sans-serif;
+	src: url('./fonts/Gosha-Sans/GoshaSans-Regular.eot');
+	src: url('./fonts/Gosha-Sans/GoshaSans-Regular.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/Gosha-Sans/GoshaSans-Regular.woff2') format('woff2'),
+		url('./fonts/Gosha-Sans/GoshaSans-Regular.woff') format('woff'),
+		url('./fonts/Gosha-Sans/GoshaSans-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
