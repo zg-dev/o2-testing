@@ -47,8 +47,14 @@
 {
 	display: flex;
 	justify-content: space-between;
-	width: 100%;
-	// max-width: 790px;
+	align-items: center;
+	max-width: 790px;
+	flex-basis: 70%;
+	@media (max-width: 768px)
+	{
+		flex-basis: unset;
+		width: 100%;
+	}
 }
 .footer__logo
 {
@@ -60,6 +66,12 @@
 .footer__send-form
 {
 	width: 100%;
+	max-width: 443px;
+	@media (max-width: 768px)
+	{
+		max-width: unset;
+	}
+	
 }
 
 

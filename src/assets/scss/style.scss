@@ -9,11 +9,16 @@
 @import 'base/default';
 
 /* blocks */
-@import '../../blocks/header/header';
+@import '../../blocks/header/header-desk';
+@import '../../blocks/header/header-mob';
 @import '../../blocks/contacts/contacts';
 @import '../../blocks/logo/logo';
 @import '../../blocks/search-form/search-form';
 @import '../../blocks/profile/profile';
+@import '../../blocks/footer/footer';
+@import '../../blocks/send-form/send-form';
+@import '../../blocks/socials/socials';
+@import '../../blocks/spoiler/spoiler';
 
 /* pages */
 /* @import 'index'; */
