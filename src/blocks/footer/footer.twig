@@ -1,5 +1,65 @@
-
-	<footer>
+<footer class="footer">
+	<div class="footer__top">
 		<div class="container">
+
+			<div class="footer__top-wrapper">
+				<div class="footer__top-sub-wrapper">
+					<div class="footer__logo">
+						{% include "blocks/logo/logo.twig" %}
+					</div>
+					<div class="footer__send-form">
+						{% include "blocks/send-form/send-form.twig" %}
+					</div>
+				</div>
+				<div class="footer__socials">
+					{% include "blocks/socials/socials.twig" %}
+				</div>
+			</div>
+
 		</div>
-	</footer>
+		
+	</div>
+
+	<div class="container">
+		<div class="footer__mid">
+
+			{% include "blocks/spoiler/spoiler.twig" %}
+
+
+			<div class="footer__doc-links footer__doc-links--mobile">
+				<div class="privat-policy">
+					<a href="#" class="privat-policy__link">Политика конфиденциальности</a>
+				</div>
+				<div class="oferta">
+					<a href="#" class="oferta__link">Договор оферты</a>
+				</div>
+			</div>
+
+			<div class="footer__contacts">
+				<div class="footer__contacts-title">Телефон и Email</div>
+				{% include "blocks/contacts/contacts.twig" with {'class': 'contacts contacts--footer'} %}
+			</div>
+		</div>
+
+		<div class="footer__bottom">
+			<div class="copyright">
+				<span>© 2020 Издательство «Статут»</span>
+			</div>
+
+			<div class="footer__bottom-wrapper">
+				<div class="footer__bottom-adress">
+					<a href="#" class="adress-link">ул. Лобачевского, 92, корп. 2 119454, г. Москва</a>
+				</div>
+
+				<div class="footer__doc-links footer__doc-links--desktop">
+					<div class="privat-policy">
+						<a href="#" class="privat-policy-link">Политика конфиденциальности</a>
+					</div>
+					<div class="oferta">
+						<a href="#" class="oferta-link">Договор оферты</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

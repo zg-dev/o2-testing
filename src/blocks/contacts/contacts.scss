@@ -1,19 +1,42 @@
 .contacts
 {
+	display: flex;
+
 	font-family: $accent-font;
 	font-weight: $medium;
 	font-size: $mainFontSize;
 	line-height: $mainLineHeight;
 	color: rgba(28, 41, 77, 0.8);
 
-	&--header {
-		display: flex;
+	&--header
+	{
 		justify-content: flex-end;
 
 		& > * + * {margin-left: 30px;}
 	}
-}
 
+	&--footer
+	{
+		flex-direction: column;
+
+		@media (max-width:768px){flex-direction: column-reverse;}
+
+		& > * + *
+		{
+			margin: 15px 0 0 0;
+			@media (max-width:768px)
+			{
+				border-bottom: 1px solid rgba(40, 47, 54, 0.15);
+				margin: unset;
+			}
+		}
+
+	}
+}
+.contacts__item
+{
+	@media (max-width:768px){padding: 20px 0;}
+}
 .contacts__link 
 {
 	display: flex;
@@ -30,36 +53,37 @@
 {
 	margin-left: 5px;
 	height: 20px;
+	display: none;
+	@media (max-width:768px) {display: block;}
 }
-
 
 // всплывающая подсказка для номера телефона
 [data-tooltip] {position: relative;}
 [data-tooltip]::after
 {
-content: attr(data-tooltip);
-position: absolute;
-width: 200px;
-top: 0;
-right: 0;
-background: #c1ccd5;
-color: #fff;
-padding: 15px;
-border-radius: 5px;
-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-pointer-events: none;
-opacity: 0;
-transition: 0.5s;
+	content: attr(data-tooltip);
+	position: absolute;
+	width: 200px;
+	top: 0;
+	right: 0;
+	background: #c1ccd5;
+	color: #fff;
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+	pointer-events: none;
+	opacity: 0;
+	transition: 0.5s;
 
-font-family: $accent-font;
-font-weight: $medium;
-font-size: $mainFontSize;
-line-height: $mainLineHeight;
-color: rgba(28, 41, 77, 0.8);
-
+	font-family: $accent-font;
+	font-weight: $medium;
+	font-size: $mainFontSize;
+	line-height: $mainLineHeight;
+	color: rgba(28, 41, 77, 0.8);
+	@media (max-width:768px) {left: 0;}
 } 
 [data-tooltip]:hover::after
 {
-opacity: 1;
-top: 25px;
+	opacity: 1;
+	top: 25px;
 }
