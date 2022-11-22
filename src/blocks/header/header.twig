@@ -1,28 +1,29 @@
 <header class="header">
-	
-	<div class="header__top container">
-		<div class="header__top-leftside">
-			<div class="header__city">
-				<a href="#" class="header__top-link">
-					{% include '/assets/svg/geo.svg' %}
-					<span>Москва</span>
-				</a>
+	<div class="header__top">
+		<div class="header__top-wrapper container">
+			<div class="header__top-leftside">
+				<div class="header__city">
+					<a href="#" class="header__top-link">
+						{% include '/assets/svg/geo.svg' %}
+						<span>Москва</span>
+					</a>
+				</div>
+				<div class="header__shipping">
+					<a href="#" class="header__top-link">
+						{% include '/assets/svg/shipping.svg' %}
+						<span>Доставка и оплата</span>
+					</a>
+				</div>
+				<div class="header__adress">
+					<a href="#" class="header__top-link">
+						{% include '/assets/svg/adress.svg' %}
+						<span>Адрес и часы работы</span>
+					</a>
+				</div>
 			</div>
-			<div class="header__shipping">
-				<a href="#" class="header__top-link">
-					{% include '/assets/svg/shipping.svg' %}
-					<span>Доставка и оплата</span>
-				</a>
+			<div class="header__top-rightside">
+				{% include 'blocks/contacts/contacts.twig' with {'class': "contacts contacts--header"} %}
 			</div>
-			<div class="header__adress">
-				<a href="#" class="header__top-link">
-					{% include '/assets/svg/adress.svg' %}
-					<span>Адрес и часы работы</span>
-				</a>
-			</div>
-		</div>
-		<div class="header__top-rightside">
-			{% include 'blocks/contacts/contacts.twig' with {'class': "contacts contacts--header"} %}
 		</div>
 	</div>
 

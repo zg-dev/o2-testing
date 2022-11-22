@@ -1,32 +1,13 @@
 <div class="top-section">
-	{% include "blocks/slider/slider.twig" %}
-	<div class="day-book">
-		<div class="day-book__card-title">
-			<h4>Книга дня</h4>
-			<span class="day-book__timer">08:56:31</span>
-		</div>
-		<div class="day-book__img">
-			<picture>
-				<source srcset="img/oleg_roy.webp" type="image/webp">
-				<img src="img/oleg_roy.jpg" alt="Олег Рой">
-			</picture>
-		</div>
-		<div class="day-book__content">
-			<p class="day-book__category">Корпоративное право</p>
-			<p class="day-book__title">Инвестирование: способы, риски, субъекты : монография</p>
-			<p class="day-book__author">Майфат А.В.</p>
-			<div class="day-book__price">4 450 ₽ </div>
-			<div class="day-book__bottom">
-				<button class="day-book__cart">
-					{% include "assets/svg/cart.svg" with {'fill': '#FF7A00'} %}
-					<span>В корзину</span>
-				</button>
-				<button class="day-book__bookmark">
-					{% include "assets/svg/bookmark.svg" %}
-				</button>
-			</div>
-		</div>
+
+	<div class="top-section__slider">
+		{% include "blocks/slider/slider.twig" %}
 	</div>
+
+	<div class="top-section__day-book">
+		{% include "blocks/card-book/card-book.twig" %}
+	</div>
+
 	<div class="promo-card card__shipping">
 		{% include "assets/svg/wave_big_orange.svg" %}
 		<div class="promo-card__content">
@@ -42,7 +23,7 @@
 		{% include "assets/svg/wave_green.svg" %}
 		<div class="promo-card__content">
 			<div class="promo-card__text">
-				Скидка при регистрации<br> до 15%
+				Скидка<br> при регистрации<br> до 15%
 			</div>
 			<div class="promo-card__img">
 				<img src="img/sign-up_img.png" alt="Бесплатная доставка">

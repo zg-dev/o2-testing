@@ -1,0 +1,24 @@
+<div class="day-book">
+	<div class="day-book__card-title">
+		<h4 class="card__title">Книга дня</h4>
+		<span class="day-book__timer">08:56:31</span>
+	</div>
+	<div class="day-book__img-wpapper">
+		<img class="day-book__img" src="img/oleg_roy.jpg" alt="Олег Рой">
+	</div>
+	<div class="day-book__content">
+		<p class="day-book__category">Корпоративное право</p>
+		<p class="day-book__title">Инвестирование: способы, риски, субъекты : монография</p>
+		<p class="day-book__author">Майфат А.В.</p>
+		<div class="day-book__price">4 450 ₽ </div>
+	</div>
+	<div class="day-book__bottom">
+		<button class="day-book__button day-book__cart">
+			{% include "assets/svg/cart.svg" with {'fill': '#FF7A00'} %}
+			<span>В корзину</span>
+		</button>
+		<button class="day-book__button day-book__bookmark">
+			{% include "assets/svg/bookmark.svg" %}
+		</button>
+	</div>
+</div>

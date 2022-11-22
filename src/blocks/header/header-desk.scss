@@ -2,6 +2,7 @@
 {
 	padding-top: 15px;
 	padding-bottom: 20px;
+	margin-bottom: 30px;
 
 	width: 100%;
 	background-color: #fff;
@@ -14,22 +15,26 @@
 
 	@media (max-width: 768px) {
 		padding-bottom: 15px;
+		margin-bottom: 11px;
 		border-bottom: 1px solid #ECECEC;
 	}
 }
 
 .header__top
 {
-	padding-bottom: 15px;
 
-	display: flex;
-	justify-content: space-between;
 	border-bottom: 1px solid #DFE0E1;
 
 	@media (max-width: 768px) {
 		display: none;
 		border-bottom: none;
 	}
+}
+.header__top-wrapper
+{
+	padding-bottom: 15px;
+	display: flex;
+	justify-content: space-between;
 }
 .header__top-leftside
 {

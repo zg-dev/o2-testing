@@ -1,40 +1,49 @@
 .top-section
 {
+	margin-bottom: 30px;
 	display: grid;
 	grid-gap: 30px;
-	grid-template-columns: 
-  repeat(3, minmax(300px, 1fr));
-	grid-template-rows: minmax(auto, 350px) minmax(140px, auto);
+	grid-template-columns: repeat(3, minmax(300px, 1fr));
+	grid-template-rows: minmax(auto, 350px) minmax(auto, 140px);
 
+	@media (max-width: $mobile)
+	{
+		margin-bottom: 10px;
+		grid-gap: 10px;
+		grid-template-columns: 1fr;
+		grid-template-rows: 175px 464px 140px 140px;
+
+	}
 }
 
-.day-book
+.top-section__slider
 {
+	grid-column: 1/3;
+	border-radius: 5px;
+	overflow: hidden;
+
+	@media (max-width: $mobile)
+	{
+		grid-column: 1;	
+	}
 }
-.day-book__card-title {
-}
-.day-book__timer {
-}
-.day-book__img {
-}
-.day-book__content {
-}
-.day-book__category {
-}
-.day-book__title {
-}
-.day-book__author {
-}
-.day-book__price {
-}
-.day-book__bottom {
-}
-.day-book__cart {
-}
-.day-book__bookmark {
+
+.top-section__day-book
+{
+	grid-row: 1/3;
+	border-radius: 5px;
+	overflow: hidden;
+
+	@media (max-width: $mobile)
+	{
+		grid-row: 2;	
+	}
 }
 
 
+
+
+// PROMO-CARDS
 .promo-card
 {
 	padding: 20px 25px;
@@ -56,6 +65,12 @@
 	background-color: #6D378F;
 	color: #FFFFFF;
 
+	@media (max-width: $mobile)
+	{
+		grid-row: unset;
+		grid-column: unset;	
+	}
+
 	& svg
 	{
 		position: absolute;
@@ -70,6 +85,12 @@
 
 	background-color: #FFD8EF;
 	color: #494C6D;
+
+	@media (max-width: $mobile)
+	{
+		grid-row: unset;
+		grid-column: unset;	
+	}
 
 	& svg
 	{
