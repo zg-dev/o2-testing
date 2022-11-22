@@ -1,167 +1,57 @@
-<footer>
-	<div class="footer-top__wrapper">
+<footer class="footer">
+	<div class="footer__top">
 		<div class="container">
-			<div class="footer-top">
-				<div class="footer-top__sub-wrapper">
-					<div class="footer-top__logo">
-						<div class="logo">
-							<a href="#" class="logo">
-								<div class="logo__img-wrap">
-									<picture>
-										<source srcset="img/logostatut.webp" type="image/webp">
-										<img src="img/logostatut.png" alt="Logo" width="57px">
-									</picture>
-								</div>
-							</a>
-						</div>
+
+			<div class="footer__top-wrapper">
+				<div class="footer__top-sub-wrapper">
+					<div class="footer__logo">
+						{% include "blocks/logo/logo.twig" %}
 					</div>
-					<div class="footer-top__send-form-wrapper">
-						<form action="submit" class="send-form">
-							<input type="text" class="send-form__input" placeholder="Введите свой Email и получите скидку">
-							<button type="submit" class="send-form__button">
-								{% include '/assets/svg/send.svg' %}
-							</button>
-						</form>
+					<div class="footer__send-form">
+						{% include "blocks/send-form/send-form.twig" %}
 					</div>
 				</div>
-				<div class="footer-top__socials-wrapper">
-					<ul class="social-links-list">
-						<li class="social-links-list__item">
-							<a href="#" class="social-links-list__link">
-								{% include '/assets/svg/Facebook.svg' %}
-							</a>
-						</li>
-						<li class="social-links-list__item">
-							<a href="#" class="social-links-list__link">
-								{% include '/assets/svg/Instagram.svg' %}
-							</a>
-						</li>
-						<li class="social-links-list__item">
-							<a href="#" class="social-links-list__link">
-								{% include '/assets/svg/Twitter.svg' %}
-							</a>
-						</li>
-					</ul>
+				<div class="footer__socials">
+					{% include "blocks/socials/socials.twig" %}
 				</div>
 			</div>
+
 		</div>
+		
 	</div>
 
 	<div class="container">
-		<div class="footer-mid">
+		<div class="footer__mid">
 
 			{% include "blocks/spoiler/spoiler.twig" %}
-			{# <div class="footer-mid__buyers">
-				<h5 class="footer-mid__buyers-title">Покупателям</h5>
-				<ul class="footer-mid__buyers-list">
-					<li class="footer-mid__buyers-list-item">
-						<a href="#" class="footer-mid__buyers-list-item">
-							Наша почта
-						</a>
-					</li>
-					<li class="footer-mid__buyers-list-item">
-						<a href="#" class="footer-mid__buyers-list-item">
-							Оплата и доставка
-						</a>
-					</li>
-					<li class="footer-mid__buyers-list-item">
-						<a href="#" class="footer-mid__buyers-list-item">
-							Вопросы и ответы
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footer-mid__publishing">
-				<h5 class="footer-mid__publishing-title">Издательство</h5>
-				<ul class="footer-mid__publishing-list">
-					<li class="footer-mid__publishing-list-item">
-						<a href="#" class="footer-mid__publishing-list-link">
-							О компании
-						</a>
-					</li>
-					<li class="footer-mid__publishing-list-item">
-						<a href="#" class="footer-mid__publishing-list-link">
-							Авторам
-						</a>
-					</li>
-					<li class="footer-mid__publishing-list-item">
-						<a href="#" class="footer-mid__publishing-list-link">
-							Вакансии
-						</a>
-					</li>
-					<li class="footer-mid__publishing-list-item">
-						<a href="#" class="footer-mid__publishing-list-link">
-							Контакты
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footer-mid__books">
-				<h5 class="footer-mid__books-title">Книги</h5>
-				<ul class="footer-mid__books-list">
-					<li class="footer-mid__books-list-item">
-						<a href="#" class="footer-mid__books-list-link">
-							XXX
-						</a>
-					</li>
-					<li class="footer-mid__books-list-item">
-						<a href="#" class="footer-mid__books-list-link">
-							XXX
-						</a>
-					</li>
-					<li class="footer-mid__books-list-item">
-						<a href="#" class="footer-mid__books-list-link">
-							XXX
-						</a>
-					</li>
-					<li class="footer-mid__books-list-item">
-						<a href="#" class="footer-mid__books-list-link">
-							XXX
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footer-mid__pricelist">
-				<h5 class="footer-mid__pricelist-title">Прайс-лист</h5>
-				<ul class="footer-mid__pricelist-list">
-					<li class="footer-mid__pricelist-list-item">
-						<a href="#" class="footer-mid__pricelist-list-link">
-							{% include "/assets/svg/File.svg" %}
-							<div class="link-text-wrapper">
-								<span>Скачать прайс-лист</span>
-								<span>PDF, 12 Mb </span>
-							</div>
-						</a>
-					</li>
-				</ul>
-			</div> #}
 
-			<div class="footer-mid__doc-links footer-mid__doc-links--mobile">
+
+			<div class="footer__doc-links footer__doc-links--mobile">
 				<div class="privat-policy">
-					<a href="#" class="privat-policy-link">Политика конфиденциальности</a>
+					<a href="#" class="privat-policy__link">Политика конфиденциальности</a>
 				</div>
 				<div class="oferta">
-					<a href="#" class="oferta-link">Договор оферты</a>
+					<a href="#" class="oferta__link">Договор оферты</a>
 				</div>
 			</div>
 
-			<div class="footer-mid__contacts">
-				<div class="footer-mid__contacts-title">Телефон и Email</div>
-				{% include "blocks/contacts/contacts.twig" %}
+			<div class="footer__contacts">
+				<div class="footer__contacts-title">Телефон и Email</div>
+				{% include "blocks/contacts/contacts.twig" with {'class': 'contacts contacts--footer'} %}
 			</div>
 		</div>
 
-		<div class="footer-bottom">
+		<div class="footer__bottom">
 			<div class="copyright">
 				<span>© 2020 Издательство «Статут»</span>
 			</div>
 
-			<div class="footer-bottom__sub-wrapper">
-				<div class="footer-bottom__adress-wrapper">
+			<div class="footer__bottom-wrapper">
+				<div class="footer__bottom-adress">
 					<a href="#" class="adress-link">ул. Лобачевского, 92, корп. 2 119454, г. Москва</a>
 				</div>
 
-				<div class="footer-mid__doc-links footer-mid__doc-links--desktop">
+				<div class="footer__doc-links footer__doc-links--desktop">
 					<div class="privat-policy">
 						<a href="#" class="privat-policy-link">Политика конфиденциальности</a>
 					</div>

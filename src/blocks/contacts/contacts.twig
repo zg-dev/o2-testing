@@ -1,18 +1,17 @@
-<ul class="contacts-list">
-	<li class="contacts-list__item">
-		<a href="mailto:market@estatut.ru" class="contacts-list__link">
+<div class = "{{class}}">
+	<div class="contacts__item contacts__email">
+		<a href="mailto:market@estatut.ru" class="contacts__link">
 			{% include '/assets/svg/mail.svg' %}
 			<span>market@estatut.ru</span>
 		</a>
-	</li>
-
-	<li class="contacts-list__item">
-		<a href="callto:+79686606550" class="contacts-list__link">
+	</div>
+	<div class="contacts__item contacts__phone">
+		<a href="call:+79686606550" class="contacts__link">
 			{% include '/assets/svg/phone.svg' %}
 			<span>8 (968) 660-65-50</span>
 		</a>
-		<span data-tooltip="какой-то инфо-текст" class="contacts-list__link-info">
+		<span data-tooltip="какой-то инфо-текст" class="contacts__link-info">
 			{% include '/assets/svg/info.svg' %}
 		</span>
-	</li>
-</ul>
+	</div>
+</div>
