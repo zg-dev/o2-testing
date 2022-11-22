@@ -1,0 +1,36 @@
+<div class="book">
+
+	<div class="book__img-wrapper">
+		<img src="{{img}}" alt="{{alt}}" class="book__img">
+	</div>
+
+	<div class="book__info">
+		<p class="book__category">{{bookCat}}</p>
+		<p class="book__name">{{bookName}}</p>
+		<p class="book__author">{{author}}</p>
+		<p class="book__price">{{bookPrice}}</p>
+	</div>
+
+	<div class="book__promo-labels">
+		<div class="book__star-reit">
+			{% include "assets/svg/star.svg" %}
+			<span class="book__star-reit-numbers">4,9</span>
+		</div>
+		<div class="book__percent-reit">
+			{% include "assets/svg/like.svg" %}
+			<span class="book__percent-reit-text">89% рекомендуют</span>
+		</div>
+	</div>
+
+	<div class="book__buttons">
+		<button class="book__bye">
+			{% include "assets/svg/cart.svg" %}
+			<span>В корзину</span>
+		</button>
+		<button class="book__mark">
+			{% include "asssets/svg/bookmark.svg" %}
+		</button>
+	</div>
+
+
+</div>
