@@ -1,0 +1,51 @@
+.top-section
+{
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: 
+  repeat(3, minmax(300px, 1fr));
+	grid-template-rows: 350px 140px;
+
+}
+
+.day-book
+{
+}
+.day-book__card-title {
+}
+.day-book__timer {
+}
+.day-book__img {
+}
+.day-book__content {
+}
+.day-book__category {
+}
+.day-book__title {
+}
+.day-book__author {
+}
+.day-book__price {
+}
+.day-book__bottom {
+}
+.day-book__cart {
+}
+.day-book__bookmark {
+}
+.promo-card {
+}
+.card__sipping
+{
+	grid-column: 1;
+	grid-row: 2;
+}
+.promo-card__text {
+}
+.promo-card__img {
+}
+.card__sign-up
+{
+	grid-column: 2;
+	grid-row: 2;
+}
