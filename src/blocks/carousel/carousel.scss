@@ -1,0 +1,91 @@
+.carousel
+{
+	margin-bottom: 30px;
+
+	background-color: #ffffff;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.carousel__top
+{
+	padding: 15px 25px;
+	border-bottom: 1px solid rgba(28, 41, 77, 0.15);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.carousel__title 
+{
+	margin: 0;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 25px;
+	color: $textColor;
+}
+.carousel__buttons
+{
+	width: 61px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	border: 1px solid rgba(28, 41, 77, 0.15);
+	border-radius: 5px;
+}
+.carousel-button
+{
+	width: 30px;
+	height: 30px;
+	padding: 10px;
+
+	display: flex;
+	align-items: center;
+	justify-content: start;
+
+	outline: none;
+	border: none;
+
+	.chevron-icon
+	{
+		width: 10px;
+		height: 10px;
+	}
+}
+.carousel-button--left{
+
+	border-right: 1px solid rgba(28, 41, 77, 0.15);
+	opacity: 0.5;
+	.chevron-icon
+	{
+		transform: rotate(180deg);
+	}
+}
+.carousel__cards-wrapper
+{
+	display: flex;
+	align-items: center;
+
+	& > * + *
+	{
+		border-left: 1px solid rgba(28, 41, 77, 0.15);
+	}
+}
+.carousel__cards-item
+{
+	padding: 0 15px;
+}
+.carousel__cards-item:nth-child(1){padding-left: 0;}
+.carousel__cards-item:last-child{padding-right: 0;}
+
+.carousel__bottom
+{
+	padding: 10px 0;
+	border-top: 1px solid rgba(28, 41, 77, 0.15);
+	text-align: center;
+}
+.carousel__bottom-link
+{
+	font-weight: $medium;
+	font-size: 14px;
+	line-height: 20px;
+	color: $textColor;
+}

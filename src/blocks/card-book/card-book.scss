@@ -1,10 +1,11 @@
-
-.day-book
+.card
 {
-	
+	width: 263px;
+
+	padding: 25px 20px 21px;
 	background-color: #FFFFFF;
 
-	padding: 22px 20px 26px;
+	position: relative;
 
 	font-family: $accent-font;
 	font-weight: $medium;
@@ -14,76 +15,154 @@
 
 	@media (max-width: $mobile)
 	{
+		padding: 20px 10px;
+	}
+
+	.card__header{display: none;}
+}
+
+.card--daybook
+{
+	width: unset;
+	padding: 22px 20px 26px;
+
+	@media (max-width: $mobile)
+	{
 		padding: 22px 20px 20px;
-	}	
-}
-.day-book__card-title
-{
-	margin-bottom: 23px;
-	height: 20px;
+	}
 
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	.card__labels{display: none;}
 
-	
-	font-size: 16px;
-	line-height: 20px;
+	.card__header
+	{
+		margin-bottom: 23px;
+		height: 20px;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.card__title
+	{
+		font-size: 16px;
+		letter-spacing: 0;
+		margin: 0;
+	}
+	.card__timer
+	{
+		width: 68px;
+		height: 25px;
+		padding: 0 10px;
+		background-color: rgba(255, 122, 0, 0.15);
+		border-radius: 5px;
+
+		font-size: 12px;
+		line-height: 25px;
+		color: #FF7A00;
+	}
+
+	.card__book-img-wpapper
+	{
+		height: 250px;
+		
+		@media (max-width: $mobile)
+		{
+			height: 200px;	
+		}
+	}
 }
-.card__title
+
+
+//Labels-block
+.card__labels
 {
-	font-size: 16px;
-	letter-spacing: 0;
-	margin: 0;
+	position: absolute;
+	top: 20px;
+	left: 20px;
 }
-.day-book__timer
+.card__label 
 {
-	width: 68px;
-	height: 25px;
+	margin-bottom: 10px;
 	padding: 0 10px;
-	background-color: rgba(255, 122, 0, 0.15);
 	border-radius: 5px;
+	width: fit-content;
+	display: none;
 
+	font-family: $accent-font;
+	font-weight: $medium;
 	font-size: 12px;
 	line-height: 25px;
-	color: #FF7A00;
 }
-.day-book__img-wpapper
+.card__label--bestseller
+{
+	background-color: #EEE9F7;
+	color: #AC8EE3;
+	display: block;
+}
+.card__label--new-book
+{
+	background-color: #E2F6EC;
+	color: #3DC47E;
+	display: block;
+}
+.card__label--sale
+{
+	background-color: #FFEEEE;
+	color: #FF4F52;
+	display: block;
+}
+
+
+//Heading-block
+
+
+
+// IMG-block
+.card__book-img-wpapper
 {
 	margin: 0 0 15px;
 	display: flex;
 	justify-content: center;
-	height: 250px;
+	height: 200px;
 	
 	@media (max-width: $mobile)
 	{
-		height: 200px;	
+		height: 180px;	
 	}
 }
-.day-book__img
+.card__book-img
 {
 	height: auto;
 }
-.day-book__content
+
+
+//Description-block
+.card__book-content
 {
 	margin-bottom: 12px;
 	& > * + * {margin-top: 8px;}
 }
-.day-book__category
+.card__book-category
 {
+	display: block;
 	margin-bottom: 8px;
 	font-weight: $regular;
 	font-size: 12px;
 	line-height: 15px;
 	color: rgba(28, 41, 77, 0.5);
 }
-.day-book__title
+.card__book-title
 {
 	line-height: 19px;
 	font-weight: $medium;
 }
-.day-book__author
+.card__book-author
 {
+	display: block;
 	font-weight: $regular;
 	font-size: 12px;
 	line-height: 15px;
@@ -93,12 +172,100 @@
 	;
 	opacity: 0.8;
 }
-.day-book__price {
+
+
+//Price-block
+.card__price-block
+{
+	display: flex;
+	align-items: end;
+
+	font-weight: $regular;
+	font-size: 12px;
+
+	& > * + * {margin-left: 7px;}
+}
+.card__book-price {
 	font-weight: $bold;
 	font-size: 18px;
 	line-height: 20px;
+
+	&--red{color: #FD3A3A;
+	}
 }
-.day-book__bottom
+
+.card__book-price {
+}
+.card__book-price-old
+{
+	line-height: 15px;
+	color: rgba(28, 41, 77, 0.5);
+	position: relative;
+	display: none;
+
+	&--active {display: block;}
+
+	&--active::before
+	{
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 41px;
+		height: 1px;
+		background-color: #FD3A3A;
+		border-radius: 2px;
+		transform: rotate(-5deg);
+	}
+}
+.card__book-price-profit
+{
+	line-height: 14px;
+	color: #0DB98C;
+
+	&--active {display: block;}
+}
+
+
+//Reiting-block
+.card__book-review
+{
+	display: flex;
+
+	> * + * {margin-left: 10px;}
+}
+.card__book-review-link
+{
+	display: flex;
+	align-items: end;
+	border-radius: 5px;
+
+	font-family: $accent-font;
+	font-weight: $medium;
+	font-size: 12px;
+
+	& span{margin-left: 5px;}
+}
+.card__book-stars
+{
+	padding: 5px 8px;
+	background-color: #FBC02D80;
+
+	line-height: 13px;
+	color: #FFA34D;
+}
+.card__book-recommend
+{
+	padding: 5px 10px;
+	background-color: #7986CB80;
+
+	line-height: 12px;
+	color: #7986CB;
+}
+
+
+// Buttons-block
+.card__bottom
 {
 	display: flex;
 
@@ -107,18 +274,24 @@
 		margin-left: 10px;
 	}
 }
-.day-book__button
+.card__button
 {
+	display: flex;
+	align-items: end;
 	height: 40px;
 	border: 1px solid #EEEEEE;
 	border-radius: 5px;
 	background-color: #fff;
+
+	@media (max-width: $mobile)
+	{
+		padding: 8px;
+	}
 }
-.day-book__cart {
+.card__button--cart {
 	padding: 10px 25px;
 	line-height: 15px;
-	display: flex;
-	align-items: center;
+	
 
 	@media (max-width: $mobile)
 	{
@@ -134,7 +307,7 @@
 		fill: #FF7A00;
 	}
 }
-.day-book__bookmark
+.card__button--bookmark
 {
 	padding: 10px;
 }

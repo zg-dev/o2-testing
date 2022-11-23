@@ -1,23 +1,50 @@
-<div class="day-book">
-	<div class="day-book__card-title">
-		<h4 class="card__title">Книга дня</h4>
-		<span class="day-book__timer">08:56:31</span>
+<div class="card {{cardModifier}}">
+	<div class="card__labels">
+		<div class="card__label {{labelBestseller}}">{{bestSeller}}</div>
+		<div class="card__label {{labelNewBook}}">{{newBook}}</div>
+		<div class="card__label {{labelSale}}">{{saleAction}}</div>
 	</div>
-	<div class="day-book__img-wpapper">
-		<img class="day-book__img" src="img/oleg_roy.jpg" alt="Олег Рой">
+	<div class="card__header">
+		<h4 class="card__title">{{cardTitle}}</h4>
+		<span class="card__timer">{{cardTimer}}</span>
 	</div>
-	<div class="day-book__content">
-		<p class="day-book__category">Корпоративное право</p>
-		<p class="day-book__title">Инвестирование: способы, риски, субъекты : монография</p>
-		<p class="day-book__author">Майфат А.В.</p>
-		<div class="day-book__price">4 450 ₽ </div>
+	<div class="card__book-img-wpapper">
+		<img class="card__book-img" src="{{img}}" alt="Олег Рой">
 	</div>
-	<div class="day-book__bottom">
-		<button class="day-book__button day-book__cart">
+	<ul class="card__book-content">
+		<li>
+			<a href="#" class="card__book-category">{{category}}</a>
+		</li>
+		<li>
+			<p class="card__book-title">{{bookTitle}}</p>
+		</li>
+		<li>
+			<a href="#" class="card__book-author">{{author}}</a>
+		</li>
+		<li>
+			<div class="card__price-block">
+				<span class="card__book-price {{priceColor}}">{{bookPrice}}</span>
+				<span class="card__book-price-old card__book-price-old{{oldPriceActive}}">{{bookPriceOld}}</span>
+				<span class="card__book-price-profit card__book-price-profit{{priceProfitActive}}">{{bookPriceProfit}}</span>
+			</div>
+		</li>
+		<div class="card__book-review {{reviewActive}}">
+			<a href="#" class="card__book-review-link card__book-stars">
+				{% include "assets/svg/star.svg" %}
+				<span>{{bookStars}}</span>
+			</a>
+			<a href="#" class="card__book-review-link card__book-recommend">
+				{% include "assets/svg/like.svg" %}
+				<span>{{reitPercents}} рекомендуют</span>
+			</a>
+		</div>
+	</ul>
+	<div class="card__bottom">
+		<button class="card__button card__button--cart">
 			{% include "assets/svg/cart.svg" with {'fill': '#FF7A00'} %}
 			<span>В корзину</span>
 		</button>
-		<button class="day-book__button day-book__bookmark">
+		<button class="card__button card__button--bookmark">
 			{% include "assets/svg/bookmark.svg" %}
 		</button>
 	</div>

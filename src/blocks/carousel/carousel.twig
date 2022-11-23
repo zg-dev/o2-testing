@@ -1,0 +1,31 @@
+<div class="carousel">
+	<div class="carousel__top">
+		<h3 class="carousel__title">{{carouselTitle}}</h3>
+		<div class="carousel__buttons">
+			<button class="carousel-button carousel-button--left">
+				{% include "assets/svg/chevron.svg" %}
+			</button>
+			<button class="carousel-button carousel-button--right">
+				{% include "assets/svg/chevron.svg" %}
+			</button>
+		</div>
+	</div>
+	<ul class="carousel__cards-wrapper">
+		<li class="carousel__cards-item">
+			{% include "blocks/card-book/card-book.twig" with {'labelBestseller': 'card__label--bestseller', 'labelSale': 'card__label--sale', 'bestSeller': 'Бестселлер', 'saleAction': '1+1=3', 'img': 'img/north-south.jpg', 'category': 'Копоративное право', 'bookTitle': 'Инвестирование: способы, риски, субъекты : монография', 'author': 'Майфат А.В.', 'bookStars': '4,9', 'reitPercents': '89%', 'bookPrice': '4 450 ₽'} %}
+		</li>
+		<li class="carousel__cards-item">
+			{% include "blocks/card-book/card-book.twig" with {'labelNewBook': 'card__label--new-book', 'newBook': 'Новинка', 'img': 'img/vitya_malev.jpg', 'category': 'Договорное право', 'bookTitle': 'Договор коммерческой концессии (франчайзинг). Граж...', 'author': 'Багдасарян А.Ф.', 'bookStars': '4,9', 'reitPercents': '89%', 'bookPrice': '372 ₽ '} %}
+		</li>
+		<li class="carousel__cards-item">
+			{% include "blocks/card-book/card-book.twig" with {'img': 'img/bezhin_lug.jpg', 'category': 'Конкурентное право', 'bookTitle': 'Договор коммерческой концессии (франчайзинг). Граж...', 'author': 'Башлаков-Николаев И.В.', 'bookStars': '4,9', 'reitPercents': '89%', 'priceColor': 'card__book-price--red', 'bookPrice': '984 ₽', 'oldPriceActive': '--active', 'priceProfitActive': '--active', 'bookPriceOld': '1 284 ₽', 'bookPriceProfit': 'Выгода 300 ₽'} %}
+		</li>
+		<li class="carousel__cards-item">
+			{% include "blocks/card-book/card-book.twig" with {'labelBestseller': 'card__label--bestseller', 'labelSale': 'card__label--sale', 'bestSeller': 'Бестселлер', 'saleAction': '1+1=3', 'img': 'img/north-south.jpg', 'category': 'Копоративное право', 'bookTitle': 'Инвестирование: способы, риски, субъекты : монография', 'author': 'Майфат А.В.', 'bookStars': '4,9', 'reitPercents': '89%', 'bookPrice': '450 ₽'} %}
+		</li>
+	</ul>
+	<div class="carousel__bottom">
+		<a href="#" class="carousel__bottom-link">Показать все книги раздела</a>
+	</div>
+
+</div>
