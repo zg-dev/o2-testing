@@ -2,10 +2,31 @@
 
 {% block page %}
 	<div class="container">
-		{% include "blocks/top-section/top-section.twig" %}
+
+		{# {% include "blocks/top-section/top-section.twig" %} #}
 
 		<div class="new-books">
 			{% include "blocks/carousel/carousel.twig" with {'carouselTitle': 'Новые поступления'} %}
+		</div>
+
+		<div class="subscribe">
+			{% include "blocks/subscribe/subscribe.twig" %}
+		</div>
+
+		<div class="expect-books">
+			{% include "blocks/carousel/carousel.twig" with {'carouselTitle': 'Готовятся к выходу'} %}
+		</div>
+
+		<div class="services">
+			<div class="services__wrapper">
+				{% include "blocks/services/services.twig" with {'imgFile': 'clocks.png', 'imgAlt': 'Бесплатная доставка', 'serviceCardTitle': 'Бесплатная доставка', 'serviceCardText': 'Доставим бесплатно<br> от 2000 ₽ по всей России'} %}
+
+				{% include "blocks/services/services.twig" with {'imgFile': 'bankcard.png', 'imgAlt': 'Безопасная оплата', 'serviceCardTitle': 'Безопасная оплата', 'serviceCardText': 'Плати безопасно и легко онлайн на нашем сайте.'} %}
+
+				{% include "blocks/services/services.twig" with {'imgFile': 'big-star.png', 'imgAlt': 'Бонусная программа', 'serviceCardTitle': 'Бонусная программа', 'serviceCardText': 'Дополнительная скидка 15% при регистрации'} %}
+
+				{% include "blocks/services/services.twig" with {'imgFile': 'shopping.png', 'imgAlt': 'Большой выбор', 'serviceCardTitle': 'Большой выбор', 'serviceCardText': 'Ежегодно выходит в свет более 100 книг'} %}
+			</div>
 		</div>
 
 	</div>
