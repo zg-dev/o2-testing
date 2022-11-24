@@ -1,0 +1,31 @@
+<div class="news__wrapper">
+	<div class="news__header">
+		<h3 class="news__title">Новости</h3>
+		<div class="news__buttons">
+			<div class="news__button news__button--left">
+				{% include "assets/svg/chevron.svg" %}
+			</div>
+			<div class="news__button news__button--right">
+				{% include "assets/svg/chevron.svg" %}
+			</div>
+		</div>
+	</div>
+	<div class="news__cards-wrapper">
+		<ul class="news__cards-list">
+			<li class="news__cards-list-item">
+				{% include "blocks/news-card/news-card.twig" with {'newsCardImg': 'library.jpg', 'newsCardImgAlt': 'Библиотека', 'newsCardDate': '16 июня 2020', 'newsCardTitle': 'Бесплатный онлайн-семинар. Доктрина stare decisis: борьба за прецедент в рос...', 'newsCardText': '18 июня в «Клубе цивилистов» пройдет бесплатный онлайн-семинар по проблематике судебного прецедента. Мероприятие приуроч...'} %}
+			</li>
+			
+			<li class="news__cards-list-item">
+				{% include "blocks/news-card/news-card.twig" with {'newsCardImg': 'museum.jpg', 'newsCardImgAlt': 'Музей', 'newsCardDate': '16 июня 2020', 'newsCardTitle': 'Бесплатный онлайн-семинар. Доктрина stare decisis: борьба за прецедент в рос...', 'newsCardText': '18 июня в «Клубе цивилистов» пройдет бесплатный онлайн-семинар по проблематике судебного прецедента. Мероприятие приуроч...'} %}
+			</li>
+
+			<li class="news__cards-list-item">
+				{% include "blocks/news-card/news-card.twig" with {'newsCardImg': 'statue.jpg', 'newsCardImgAlt': 'Правосудие', 'newsCardDate': '16 июня 2020', 'newsCardTitle': 'Бесплатный онлайн-семинар. Доктрина stare decisis: борьба за прецедент в рос...', 'newsCardText': '18 июня в «Клубе цивилистов» пройдет бесплатный онлайн-семинар по проблематике судебного прецедента. Мероприятие приуроч...'} %}
+			</li>
+		</ul>
+	</div>
+	<div class="news__bottom">
+		<a href="#" class="news__bottom-link">Показать все новости</a>
+	</div>
+</div>

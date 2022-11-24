@@ -1,27 +1,31 @@
-.carousel
+.news
 {
 	margin-bottom: 30px;
-
-	background-color: #ffffff;
 	border-radius: 5px;
+	overflow: hidden;
+	background-color: #fff;
 }
-.carousel__top
+.news__wrapper
 {
-	padding: 15px 25px;
-	border-bottom: 1px solid rgba(28, 41, 77, 0.15);
+}
+.news__header
+{
+	padding: 17px 25px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	border-bottom: 1px solid rgba(28, 41, 77, 0.15);
 }
-.carousel__title 
+.news__title
 {
 	margin: 0;
-	font-weight: 700;
+	font-family: $accent-font;
+	font-weight: $bold;
 	font-size: 20px;
 	line-height: 25px;
 	color: $textColor;
 }
-.carousel__buttons
+.news__buttons
 {
 	width: 61px;
 	height: 30px;
@@ -30,7 +34,7 @@
 	border: 1px solid rgba(28, 41, 77, 0.15);
 	border-radius: 5px;
 }
-.carousel-button
+.news__button
 {
 	width: 30px;
 	height: 30px;
@@ -49,8 +53,8 @@
 		height: 10px;
 	}
 }
-.carousel-button--left{
-
+.news__button--left
+{
 	border-right: 1px solid rgba(28, 41, 77, 0.15);
 	.chevron-icon
 	{
@@ -58,41 +62,42 @@
 		transform: rotate(180deg);
 	}
 }
-.carousel__cards-wrapper
+
+
+// Cards-block
+.news__cards-wrapper
+{
+	overflow: hidden;
+}
+.news__cards-list
 {
 	display: flex;
-	align-items: center;
-	overflow: hidden;
 
 	& > * + *
 	{
-		border-left: 1px solid rgba(28, 41, 77, 0.15);
+		border-left:  1px solid rgba(28, 41, 77, 0.15);
 	}
 }
-.carousel__cards-item
+.news__cards-list-item
 {
-	padding: 0 14px;
-	@media (max-width: $mobile){padding: 0;}
-}
-.carousel__cards-item:nth-child(1)
-{
-	padding: 0 15px 0 0;
-	@media (max-width: $mobile){padding-right: 0;}
-}
-.carousel__cards-item:last-child
-{
-	padding: 0 0 0 15px;
-	@media (max-width: $mobile){padding-left: 0;}
+	padding: 0 15px;
+
+	&:nth-child(1){padding: 0 14px 0 0;}
+	&:last-child{padding: 0 0 0 14px;}
 }
 
-.carousel__bottom
+.news__bottom
 {
 	padding: 10px 0;
-	border-top: 1px solid rgba(28, 41, 77, 0.15);
 	text-align: center;
+	border-top:  1px solid rgba(28, 41, 77, 0.15);
+	display: none;
+
+	@media (max-width: $mobile){display: block;}
 }
-.carousel__bottom-link
+.news__bottom-link
 {
+	font-family: $accent-font;
 	font-weight: $medium;
 	font-size: 14px;
 	line-height: 20px;
