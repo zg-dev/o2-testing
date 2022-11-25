@@ -3,7 +3,7 @@
 {% block page %}
 	<div class="container">
 
-		{# {% include "blocks/top-section/top-section.twig" %} #}
+		{% include "blocks/top-section/top-section.twig" %}
 
 		<div class="new-books">
 			{% include "blocks/carousel/carousel.twig" with {'carouselTitle': 'Новые поступления'} %}
@@ -30,16 +30,9 @@
 		</div>
 
 		<div class="news">
-			{% include "blocks/news-section/news-section.twig" %}
+			{% include "blocks/news-section/news.twig" %}
 		</div>
 
 	</div>
 
-
-	{#
-		Пример подключения файла
-		{% include '/blocks/component/component.twig' %}
-		Пример подключения svg
-		{% include '/assets/component/component.svg' %}
-	#}
 {% endblock %}

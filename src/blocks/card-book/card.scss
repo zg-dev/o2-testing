@@ -78,6 +78,12 @@
 	}
 
 	.card__book-review{display: none;}
+
+	.card__button
+{
+	height: 40px;
+	@media (max-width: $mobile) {height: 40px;}
+}
 }
 
 

@@ -3,7 +3,7 @@
 	margin-bottom: 30px;
 	display: grid;
 	grid-gap: 30px;
-	grid-template-columns: repeat(3, minmax(300px, 1fr));
+	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: minmax(auto, 350px) minmax(auto, 140px);
 
 	@media (max-width: $mobile)
@@ -46,18 +46,12 @@
 // PROMO-CARDS
 .promo-card
 {
-	padding: 20px 25px;
+	padding: 32px 25px;
 	border-radius: 5px;
 	overflow: hidden;
 	position: relative;
-
-	font-family: 'Gosha Sans', sans-serif;
-	font-style: normal;
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 25px;
 }
-.card__shipping
+.promo-card__shipping
 {
 	grid-column: 1;
 	grid-row: 2;
@@ -71,14 +65,8 @@
 		grid-column: unset;	
 	}
 
-	& svg
-	{
-		position: absolute;
-		top: 34px;
-		left: 12px;
-	}
 }
-.card__sign-up
+.promo-card__sign-up
 {
 	grid-column: 2;
 	grid-row: 2;
@@ -91,19 +79,53 @@
 		grid-row: unset;
 		grid-column: unset;	
 	}
-
-	& svg
-	{
-		position: absolute;
-		top: 84px;
-		left: 48px;
-	}
+	
 }
-.promo-card__content
+
+.promo-card__text
 {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	padding-right: 35%;
 	position: relative;
 	z-index: 1;
+
+	font-family: 'Gosha Sans', sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 25px;
+	color: inherit;
+
+	@media (max-width: $widescreen)
+	{
+		font-size: 18px;
+	}
+	@media (max-width: $desktop)
+	{
+		line-height: 22px;
+		font-size: 16px;
+	}
+
+
+	.wave-big-orange-icon
+	{
+		position: absolute;
+		z-index: -1;
+		top: -3px;
+		left: -9px;
+	}
+	.wave-green-icon
+	{
+		position: absolute;
+		z-index: -1;
+		bottom: 0;
+		left: 8%;
+	}
+}
+
+.promo-card__img
+{
+	position: absolute;
+	top: 50%;
+	right: 25px;
+	transform: translateY(-50%);
 }

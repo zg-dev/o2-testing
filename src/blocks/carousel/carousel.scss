@@ -4,6 +4,7 @@
 
 	background-color: #ffffff;
 	border-radius: 5px;
+	@media (max-width: $mobile){margin-bottom: 10px;}
 }
 .carousel__top
 {
@@ -12,6 +13,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	@media (max-width: $mobile){padding: 15px 10px;}
 }
 .carousel__title 
 {
@@ -49,8 +51,8 @@
 		height: 10px;
 	}
 }
-.carousel__button--left{
-
+.carousel__button--left
+{
 	border-right: 1px solid rgba(28, 41, 77, 0.15);
 	.chevron-icon
 	{
@@ -64,10 +66,7 @@
 	align-items: center;
 	overflow: hidden;
 
-	& > * + *
-	{
-		border-left: 1px solid rgba(28, 41, 77, 0.15);
-	}
+	& > * + * {border-left: 1px solid rgba(28, 41, 77, 0.15);}
 }
 .carousel__cards-item
 {

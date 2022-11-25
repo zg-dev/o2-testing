@@ -5,6 +5,7 @@
 
 	border-radius: 5px;
 	overflow: hidden;
+	@media (max-width: $mobile){margin-bottom: 10px;}
 }
 .subscribe__wrapper
 {
@@ -41,7 +42,6 @@
 		position: absolute;
 		top: 0;
 		left: 58px;
-
 	}
 }
 .subscribe__form

@@ -4,9 +4,7 @@
 	border-radius: 5px;
 	overflow: hidden;
 	background-color: #fff;
-}
-.news__wrapper
-{
+	@media (max-width: $mobile){margin-bottom: 20px;}
 }
 .news__header
 {
@@ -15,6 +13,7 @@
 	align-items: center;
 	justify-content: space-between;
 	border-bottom: 1px solid rgba(28, 41, 77, 0.15);
+	@media (max-width: $mobile){padding: 17px 10px;}
 }
 .news__title
 {
@@ -65,18 +64,12 @@
 
 
 // Cards-block
-.news__cards-wrapper
-{
-	overflow: hidden;
-}
+.news__cards-wrapper {overflow: hidden;}
 .news__cards-list
 {
 	display: flex;
 
-	& > * + *
-	{
-		border-left:  1px solid rgba(28, 41, 77, 0.15);
-	}
+	& > * + * {border-left:  1px solid rgba(28, 41, 77, 0.15);}
 }
 .news__cards-list-item
 {
