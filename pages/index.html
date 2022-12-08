@@ -227,32 +227,36 @@
 
 				<div class="top-section__slider">
 					<div class="slider">
-						<div class="slider__background">
+						<div id="slides" class="slider__viewport">
+							<div id="slide_1" class="slider__item">
+								<img srcset="img/2=3.webp" class="slider__img" src="img/2=3.jpg" alt="2=3">
+							</div>
+							<div id="slide_2" class="slider__item">
+								<img srcset="img/2=3.webp" class="slider__img" src="img/2=3.jpg" alt="2=3">
+							</div>
+							<div id="slide_3" class="slider__item">
+								<img srcset="img/2=3.webp" class="slider__img" src="img/2=3.jpg" alt="2=3">
+							</div>
 						</div>
-						<div class="slider__content">
-							<picture class="slider__img-main">
-								<source srcset="img/2=3.webp" type="image/webp">
-								<img class="slider__img" src="img/2=3.png" alt="2=3">
-							</picture>
-							<picture class="slider__img-sub">
-								<source srcset="img/na_vse_knigi.webp" type="image/webp">
-								<img class="slider__img" src="img/na_vse_knigi.png" alt="На все книги">
-							</picture>
-						</div>
-						<button type="submit" class="slider__button slider__button--right">
+						<button onclick="clickWatch()" type="submit" class="slider__button slider__button--right">
 							<div class="button__chevron-mask">
-								<svg class="chevron-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="chevron-icon chevron-icon--slider" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M6.9107 4.41107C7.23614 4.08563 7.76378 4.08563 8.08921 4.41107L13.0892 9.41107C13.4147 9.73651 13.4147 10.2641 13.0892 10.5896L8.08921 15.5896C7.76378 15.915 7.23614 15.915 6.9107 15.5896C6.58527 15.2641 6.58527 14.7365 6.9107 14.4111L11.3214 10.0003L6.9107 5.58958C6.58527 5.26414 6.58527 4.73651 6.9107 4.41107Z" fill="#1C294D" />
 								</svg>
 							</div>
 						</button>
-						<button type="submit" class="slider__button slider__button--left">
-							<div class="button__chevron-mask">
-								<svg class="chevron-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<button onclick="clickWatch()" type="submit" class="slider__button slider__button--left">
+							<div class="button__chevron-mask button__chevron-mask--left">
+								<svg class="chevron-icon chevron-icon--slider" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M6.9107 4.41107C7.23614 4.08563 7.76378 4.08563 8.08921 4.41107L13.0892 9.41107C13.4147 9.73651 13.4147 10.2641 13.0892 10.5896L8.08921 15.5896C7.76378 15.915 7.23614 15.915 6.9107 15.5896C6.58527 15.2641 6.58527 14.7365 6.9107 14.4111L11.3214 10.0003L6.9107 5.58958C6.58527 5.26414 6.58527 4.73651 6.9107 4.41107Z" fill="#1C294D" />
 								</svg>
 							</div>
 						</button>
+						<ul class="slider__dot-list">
+							<li class="slider__dot"></li>
+							<li class="slider__dot"></li>
+							<li class="slider__dot"></li>
+						</ul>
 					</div>
 				</div>
 
@@ -318,26 +322,30 @@
 					</div>
 				</div>
 
-				<div class="promo-card promo-card__shipping">
-					<div class="promo-card__text">
-						<svg class="wave-big-orange-icon" width="126" height="31" viewBox="0 0 126 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M5 21C42 4.5 102.5 24.5 117.5 7" stroke="#FF7A00" stroke-width="20" />
-						</svg>
-						Бесплатно доставим<br> ваш заказ при<br> покупке от 2000 ₽
-					</div>
-					<div class="promo-card__img">
-						<img src="img/shipping_img.png" alt="Бесплатная доставка">
+				<div class="top-section__promo-card top-section__promo-card--first">
+					<div class="promo-card promo-card--shipping">
+						<div class="promo-card__text">
+							<svg class="wave-big-orange-icon" width="126" height="31" viewBox="0 0 126 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5 21C42 4.5 102.5 24.5 117.5 7" stroke="#FF7A00" stroke-width="20" />
+							</svg>
+							Бесплатно доставим<br> ваш заказ при<br> покупке от 2000 ₽
+						</div>
+						<div class="promo-card__img">
+							<img src="img/shipping_img.png" alt="Бесплатная доставка">
+						</div>
 					</div>
 				</div>
-				<div class="promo-card promo-card__sign-up">
-					<div class="promo-card__text">
-						<svg class="wave-green-icon" width="67" height="28" viewBox="0 0 67 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M7.5 20.5C27.5 0.5 40.5 27 60 8" stroke="#79ECC1" stroke-width="20" />
-						</svg>
-						Скидка<br> при регистрации<br> до 15%
-					</div>
-					<div class="promo-card__img">
-						<img src="img/sign-up_img.png" alt="Бесплатная доставка">
+				<div class="top-section__promo-card top-section__promo-card--second">
+					<div class="promo-card promo-card--sign-up">
+						<div class="promo-card__text">
+							<svg class="wave-green-icon" width="67" height="28" viewBox="0 0 67 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M7.5 20.5C27.5 0.5 40.5 27 60 8" stroke="#79ECC1" stroke-width="20" />
+							</svg>
+							Скидка<br> при регистрации<br> до 15%
+						</div>
+						<div class="promo-card__img">
+							<img src="img/sign-up_img.png" alt="Скидка за регистрацию">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -347,12 +355,12 @@
 						<h3 class="carousel__title">Новые поступления</h3>
 						<div class="carousel__button-wrapper">
 							<button class="carousel__button carousel__button--left">
-								<svg class="chevron-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="chevron-icon chevron-icon--slider" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M6.9107 4.41107C7.23614 4.08563 7.76378 4.08563 8.08921 4.41107L13.0892 9.41107C13.4147 9.73651 13.4147 10.2641 13.0892 10.5896L8.08921 15.5896C7.76378 15.915 7.23614 15.915 6.9107 15.5896C6.58527 15.2641 6.58527 14.7365 6.9107 14.4111L11.3214 10.0003L6.9107 5.58958C6.58527 5.26414 6.58527 4.73651 6.9107 4.41107Z" fill="#1C294D" />
 								</svg>
 							</button>
 							<button class="carousel__button carousel__button--right">
-								<svg class="chevron-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="chevron-icon chevron-icon--slider" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M6.9107 4.41107C7.23614 4.08563 7.76378 4.08563 8.08921 4.41107L13.0892 9.41107C13.4147 9.73651 13.4147 10.2641 13.0892 10.5896L8.08921 15.5896C7.76378 15.915 7.23614 15.915 6.9107 15.5896C6.58527 15.2641 6.58527 14.7365 6.9107 14.4111L11.3214 10.0003L6.9107 5.58958C6.58527 5.26414 6.58527 4.73651 6.9107 4.41107Z" fill="#1C294D" />
 								</svg>
 							</button>
@@ -632,12 +640,12 @@
 						<h3 class="carousel__title">Готовятся к выходу</h3>
 						<div class="carousel__button-wrapper">
 							<button class="carousel__button carousel__button--left">
-								<svg class="chevron-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="chevron-icon chevron-icon--slider" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M6.9107 4.41107C7.23614 4.08563 7.76378 4.08563 8.08921 4.41107L13.0892 9.41107C13.4147 9.73651 13.4147 10.2641 13.0892 10.5896L8.08921 15.5896C7.76378 15.915 7.23614 15.915 6.9107 15.5896C6.58527 15.2641 6.58527 14.7365 6.9107 14.4111L11.3214 10.0003L6.9107 5.58958C6.58527 5.26414 6.58527 4.73651 6.9107 4.41107Z" fill="#1C294D" />
 								</svg>
 							</button>
 							<button class="carousel__button carousel__button--right">
-								<svg class="chevron-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="chevron-icon chevron-icon--slider" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M6.9107 4.41107C7.23614 4.08563 7.76378 4.08563 8.08921 4.41107L13.0892 9.41107C13.4147 9.73651 13.4147 10.2641 13.0892 10.5896L8.08921 15.5896C7.76378 15.915 7.23614 15.915 6.9107 15.5896C6.58527 15.2641 6.58527 14.7365 6.9107 14.4111L11.3214 10.0003L6.9107 5.58958C6.58527 5.26414 6.58527 4.73651 6.9107 4.41107Z" fill="#1C294D" />
 								</svg>
 							</button>
@@ -935,12 +943,12 @@
 						<h3 class="news__title">Новости</h3>
 						<div class="news__buttons">
 							<div class="news__button news__button--left">
-								<svg class="chevron-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="chevron-icon chevron-icon--slider" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M6.9107 4.41107C7.23614 4.08563 7.76378 4.08563 8.08921 4.41107L13.0892 9.41107C13.4147 9.73651 13.4147 10.2641 13.0892 10.5896L8.08921 15.5896C7.76378 15.915 7.23614 15.915 6.9107 15.5896C6.58527 15.2641 6.58527 14.7365 6.9107 14.4111L11.3214 10.0003L6.9107 5.58958C6.58527 5.26414 6.58527 4.73651 6.9107 4.41107Z" fill="#1C294D" />
 								</svg>
 							</div>
 							<div class="news__button news__button--right">
-								<svg class="chevron-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="chevron-icon chevron-icon--slider" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M6.9107 4.41107C7.23614 4.08563 7.76378 4.08563 8.08921 4.41107L13.0892 9.41107C13.4147 9.73651 13.4147 10.2641 13.0892 10.5896L8.08921 15.5896C7.76378 15.915 7.23614 15.915 6.9107 15.5896C6.58527 15.2641 6.58527 14.7365 6.9107 14.4111L11.3214 10.0003L6.9107 5.58958C6.58527 5.26414 6.58527 4.73651 6.9107 4.41107Z" fill="#1C294D" />
 								</svg>
 							</div>

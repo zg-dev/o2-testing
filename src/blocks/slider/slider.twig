@@ -1,24 +1,28 @@
 <div class="slider">
-	<div class="slider__background">
+	<div id="slides" class="slider__viewport">
+		<div id="slide_1" class="slider__item">
+			<img srcset="img/2=3.webp" class="slider__img" src="img/2=3.jpg" alt="2=3">
+		</div>
+		<div id="slide_2" class="slider__item">
+			<img srcset="img/2=3.webp" class="slider__img" src="img/2=3.jpg" alt="2=3">
+		</div>
+		<div id="slide_3" class="slider__item">
+			<img srcset="img/2=3.webp" class="slider__img" src="img/2=3.jpg" alt="2=3">
+		</div>
 	</div>
-	<div class="slider__content">
-		<picture class="slider__img-main">
-			<source srcset="img/2=3.webp" type="image/webp">
-			<img class="slider__img" src="img/2=3.png" alt="2=3">
-		</picture>
-		<picture class="slider__img-sub">
-			<source srcset="img/na_vse_knigi.webp" type="image/webp">
-			<img class="slider__img" src="img/na_vse_knigi.png" alt="На все книги">
-		</picture>
-	</div>
-	<button type="submit" class="slider__button slider__button--right">
+	<button onclick="clickWatch()" type="submit" class="slider__button slider__button--right">
 		<div class="button__chevron-mask">
 			{% include "assets/svg/chevron.svg" %}
 		</div>
 	</button>
-	<button type="submit" class="slider__button slider__button--left">
-		<div class="button__chevron-mask">
+	<button onclick="clickWatch()" type="submit" class="slider__button slider__button--left">
+		<div class="button__chevron-mask button__chevron-mask--left">
 			{% include "assets/svg/chevron.svg" %}
 		</div>
 	</button>
+	<ul class="slider__dot-list">
+		<li class="slider__dot"></li>
+		<li class="slider__dot"></li>
+		<li class="slider__dot"></li>
+	</ul>
 </div>

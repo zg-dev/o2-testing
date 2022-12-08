@@ -8,22 +8,10 @@
 		{% include "blocks/card-book/card.twig" with {'cardModifier': 'card--daybook', 'cardTitle': 'Книга дня', 'cardTimer': '08:56:31', 'img': '/img/oleg_roy.jpg', 'category': 'Копоративное право', 'bookTitle': 'Инвестирование: способы, риски, субъекты : монография', 'author': 'Майфат А.В.', 'bookPrice': '4 450 ₽'} %}
 	</div>
 
-	<div class="promo-card promo-card__shipping">
-		<div class="promo-card__text">
-			{% include "assets/svg/wave_big_orange.svg" %}
-			Бесплатно доставим<br> ваш заказ при<br> покупке от 2000 ₽
-		</div>
-		<div class="promo-card__img">
-			<img src="img/shipping_img.png" alt="Бесплатная доставка">
-		</div>
+	<div class="top-section__promo-card top-section__promo-card--first">
+		{% include "blocks/promo-card/promo-card.twig" with {'cardModifier': 'promo-card--shipping', 'cardText': 'Бесплатно доставим<br> ваш заказ при<br> покупке от 2000 ₽', 'cardSvg': 'wave_big_orange', 'img': 'img/shipping_img.png', 'imgAlt': 'Бесплатная доставка'} %}
 	</div>
-	<div class="promo-card promo-card__sign-up">
-		<div class="promo-card__text">
-			{% include "assets/svg/wave_green.svg" %}
-			Скидка<br> при регистрации<br> до 15%
-		</div>
-		<div class="promo-card__img">
-			<img src="img/sign-up_img.png" alt="Бесплатная доставка">
-		</div>
+	<div class="top-section__promo-card top-section__promo-card--second">
+		{% include "blocks/promo-card/promo-card.twig" with {'cardModifier': 'promo-card--sign-up', 'cardText': 'Скидка<br> при регистрации<br> до 15%', 'cardSvg': 'wave_green', 'img': 'img/sign-up_img.png', 'imgAlt': 'Скидка за регистрацию'} %}
 	</div>
 </div>
