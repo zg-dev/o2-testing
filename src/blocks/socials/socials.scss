@@ -3,7 +3,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
 	& > * + * {margin-left: 15px;}
 }
 .socials__link
@@ -11,7 +10,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;

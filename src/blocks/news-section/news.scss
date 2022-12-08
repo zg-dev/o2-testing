@@ -38,14 +38,11 @@
 	width: 30px;
 	height: 30px;
 	padding: 10px;
-
 	display: flex;
 	align-items: center;
 	justify-content: start;
-
 	outline: none;
 	border: none;
-
 	.chevron-icon
 	{
 		width: 10px;
@@ -68,13 +65,11 @@
 .news__cards-list
 {
 	display: flex;
-
 	& > * + * {border-left:  1px solid rgba(28, 41, 77, 0.15);}
 }
 .news__cards-list-item
 {
 	padding: 0 15px;
-
 	&:nth-child(1){padding: 0 14px 0 0;}
 	&:last-child{padding: 0 0 0 14px;}
 }
@@ -85,7 +80,6 @@
 	text-align: center;
 	border-top:  1px solid rgba(28, 41, 77, 0.15);
 	display: none;
-
 	@media (max-width: $mobile){display: block;}
 }
 .news__bottom-link

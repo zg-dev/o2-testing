@@ -3,21 +3,16 @@
 	display: flex;
 	width: 100%;
 	max-width: 443px;
-	@media (max-width: 768px)
-	{
-		max-width: unset;
-	}
+	@media (max-width: 768px) {max-width: unset;}
 }
 .send-form__input
 {
 	height: 40px;
 	width: 100%;
-	// max-width: 393px;
 	padding: 10px 15px;
 	background: #FFFFFF;
 	border: 1px solid rgba(40, 47, 54, 0.15);
 	border-radius: 5px 0 0 5px;
-	
 	font-family: $accent-font;
 	font-weight: $mainFontWeight;
 	font-size: 14px;
@@ -40,7 +35,6 @@
 	border: none;
 	border-radius: 0 5px 5px 0;
 	background: #FF5C00;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;

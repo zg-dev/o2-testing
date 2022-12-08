@@ -5,7 +5,6 @@
 	justify-content: space-between;
 	width: 100%;
 	max-width: 750px;
-
 	@media (max-width:768px)
 	{
 		flex-direction: column;
@@ -21,7 +20,6 @@
 	font-weight: $medium;
 	line-height: 20px;
 	color: $textColor;
-
 	@media (max-width:768px)
 	{
 		margin-bottom: 0;
@@ -30,7 +28,6 @@
 		position: relative;
 		font-weight: $mainFontWeight;
 		font-size: 16px;
-
 		&::after
 		{
 			content: url('../svg/chevron.svg');
@@ -40,23 +37,17 @@
 			transform: translateY(-50%) rotate(90deg);
 		}
 	}
-
 }
 .spoiler__list
 {
 	line-height: 20px;
-
-	@media (max-width:768px)
-	{
-		display: none;
-	}
+	@media (max-width:768px) {display: none;}
 }
 .spoiler__list-item + .spoiler__list-item {margin-top: 15px;}
 .spoiler__list-item-link
 {
 	display: flex;
 	align-items: center;
-
 	& svg {flex-shrink: 0;}
 }
 .link-download__wrapper

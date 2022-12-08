@@ -7,19 +7,13 @@
 }
 .promo-card--shipping
 {
-	// grid-column: 1;
 	background-color: #6D378F;
 	color: #FFFFFF;
-
-	// @media (max-width: $mobile) {grid-column: unset;}
 }
 .promo-card--sign-up
 {
-	// grid-column: 2;
 	background-color: #FFD8EF;
 	color: #494C6D;
-
-	// @media (max-width: $mobile) {grid-column: unset;}
 }
 
 .promo-card__text
@@ -27,25 +21,18 @@
 	padding-right: 35%;
 	position: relative;
 	z-index: 1;
-
 	font-family: 'Gosha Sans', sans-serif;
 	font-style: normal;
 	font-weight: 600;
 	font-size: 20px;
 	line-height: 25px;
 	color: inherit;
-
-	@media (max-width: $widescreen)
-	{
-		font-size: 18px;
-	}
+	@media (max-width: $widescreen) {font-size: 18px;}
 	@media (max-width: $desktop)
 	{
 		line-height: 22px;
 		font-size: 16px;
 	}
-
-
 	.wave-big-orange-icon
 	{
 		position: absolute;
@@ -61,7 +48,6 @@
 		left: 8%;
 	}
 }
-
 .promo-card__img
 {
 	position: absolute;

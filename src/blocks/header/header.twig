@@ -31,10 +31,8 @@
 		<div class="header__bottom-wrapper">
 			<div class="header__bottom-leftside">
 				{% include "blocks/logo/logo.twig" %}
-				
 				<div class="search-form__wrapper">
 					{% include "blocks/search-form/search-form.twig" %}
-					
 				</div>
 			</div>
 
@@ -42,13 +40,12 @@
 				{% include "blocks/profile/profile.twig" %}
 			</div>
 		</div>
-
 		<div class="header__nav">
 			<ul class="header__nav-list">
 				<li class="header__nav-list-item">
 					<a href="#" class="header__nav-link">
 						{% include '/assets/svg/burger.svg' %}
-						<span>Каталог</span>	
+						<span>Каталог</span>
 					</a>
 				</li>
 				<li class="header__nav-list-item">
@@ -81,27 +78,18 @@
 		</div>
 	</div>
 
-
-
 	<div class="header__mobile container">
-
 		<div class="header__mobile-burger">
-			{% include '/assets/svg/burger.svg' %}				
+			{% include '/assets/svg/burger.svg' %}
 		</div>
-
 		<div class="header__mobile-logo">
 			{% include "blocks/logo/logo.twig" %}
 		</div>
-
 		<div class="header__mobile-search-form">
 			{% include "blocks/search-form/search-form.twig" %}
 		</div>
-
-
 		<div class="header__mobile-cart header__mobile-cart--count">
 			{% include '/assets/svg/cart.svg' %}
 		</div>
-
-	</div> 
-
+	</div>
 </header>

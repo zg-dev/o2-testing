@@ -2,7 +2,6 @@
 {
 	margin-bottom: 30px;
 	width: 100%;
-
 	border-radius: 5px;
 	overflow: hidden;
 	@media (max-width: $mobile){margin-bottom: 10px;}
@@ -13,7 +12,6 @@
 	align-items: center;
 	background-color: #0288D1;
 	padding: 32px 45px 33px;
-
 	@media (max-width: $mobile)
 	{
 		padding: 20px 10px;
@@ -24,9 +22,8 @@
 {
 	margin-right: 14px;
 	position: relative;
-	
 	@media (max-width: $mobile) {margin: 0 0 10px 0;}
-	p 
+	p
 	{
 		position: relative;
 		z-index: 1;
@@ -36,7 +33,6 @@
 		line-height: 25px;
 		color: #FFFFFF;
 	}
-
 	 .wave-short-orange-icon
 	{
 		position: absolute;
@@ -49,7 +45,6 @@
 	display: flex;
 	width: 100%;
 	max-width: 565px;
-
 	@media (max-width: $mobile)
 	{
 		flex-direction: column;
@@ -66,13 +61,11 @@
 	border-radius: 5px;
 	border: none;
 	background-color: #fff;
-
 	font-family: $accent-font;
 	font-weight: $regular;
 	font-size: 14px;
 	line-height: 20px;
 	color: $textColor;
-
 	&::placeholder
 	{
 		font-family: inherit;
@@ -81,7 +74,6 @@
 		line-height: 20px;
 		color: rgba(28, 41, 77, 0.5);
 	}
-
 	@media (max-width: $mobile)
 	{
 		max-width: unset;
@@ -94,14 +86,10 @@
 	border: 1px solid #ffffff;
 	border-radius: 5px;
 	background-color: #0288D1;
-
 	font-family: $accent-font;
 	font-weight: $medium;
 	font-size: 14px;
 	line-height: 20px;
 	color: #FFFFFF;
-	@media (max-width: $mobile)
-	{
-		width: 100%;
-	}
+	@media (max-width: $mobile) {width: 100%;}
 }

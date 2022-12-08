@@ -1,4 +1,4 @@
-.slider 
+.slider
 {
 	position: relative;
 	background: #CCFF90;
@@ -10,14 +10,12 @@
     flex-wrap: nowrap;
 	overflow: hidden;
 }
-
 .slider__item
 {
     width: 100%;
     height: inherit;
 	flex-shrink: 0;
 }
-
 .slider__img
 {
     width: 100%;
@@ -25,7 +23,6 @@
     object-fit: cover;
     object-position: center;
 }
-
 .slider__button
 {
 	position: absolute;
@@ -39,12 +36,7 @@
 	outline: none;
 	border: none;
 	border-radius: 5px;
-
-	@media (max-width: $mobile)
-	{
-		display: none;	
-	}
-
+	@media (max-width: $mobile) {display: none;}
 	&:hover
 	{
 		background-color: #5656564d;
@@ -52,10 +44,7 @@
 	}
 }
 .slider__button--right {right: 0;}
-.slider__button--left
-{
-	left: 0;
-}
+.slider__button--left {left: 0;}
 .button__chevron-mask
 {
 	width: 40px;
@@ -73,7 +62,6 @@
 	width: 20px;
 	height: 20px;
 }
-
 .slider__dot-list
 {
 	position: absolute;
