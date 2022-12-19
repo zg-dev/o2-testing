@@ -16,32 +16,36 @@ const slidesMove = function(slide) {
 slidesMove(0);
 
 const nextSlide = function() {
-	btnRight.addEventListener('click', function() {
-		if (visibleSlide === slidesNumber - 1) {
-			visibleSlide = 0;
-		} else {
-			visibleSlide++;
-		};
-		slidesMove(visibleSlide);
+	if (visibleSlide === slidesNumber - 1) {
+		visibleSlide = 0;
+	} else {
+		visibleSlide++;
+	};
+	slidesMove(visibleSlide);
 
-		console.log('click');
-		console.log(visibleSlide);
-	});
+	console.log('click');
+	console.log(visibleSlide);
+
 };
 
 const prevSlide = function() {
-	btnLeft.addEventListener('click', function() {
-		if (visibleSlide === 0) {
-			visibleSlide = slidesNumber - 1;
-		} else {
-			visibleSlide--;
-		};
-		slidesMove(visibleSlide);
+	if (visibleSlide === 0) {
+		visibleSlide = slidesNumber - 1;
+	} else {
+		visibleSlide--;
+	};
+	slidesMove(visibleSlide);
 
-		console.log('click');
-		console.log(visibleSlide);
-	});
-}
+	console.log('click');
+	console.log(visibleSlide);
+};
 
-nextSlide();
-prevSlide();
+btnRight.addEventListener('click', nextSlide);
+btnLeft.addEventListener('click', prevSlide);
+
+slider.addEventListener('keydown', function(e) {
+	console.log(e);
+	if(e.key === 'ArrowRight') nextSlide();
+	if(e.key === 'ArrowLeft') prevSlide();
+	console.log(slider);
+});
