@@ -1,49 +1,40 @@
 .card
 {
 	width: 263px;
-
 	padding: 25px 20px 21px;
 	background-color: #FFFFFF;
-
 	position: relative;
-
 	font-family: $accent-font;
 	font-weight: $medium;
 	font-size: $mainFontSize;
 	line-height: 20px;
 	color: $textColor;
-
 	@media (max-width: $mobile)
 	{
 		width: 177px;
 		padding: 20px 10px;
 	}
-
 	.card__header{display: none;}
 }
-
 .card--daybook
 {
+	border-radius: 5px;
+	overflow: hidden;
 	width: unset;
 	padding: 22px 20px 26px;
-
 	@media (max-width: $mobile)
 	{
 		padding: 22px 20px 20px;
 		width: unset;
 	}
-
 	.card__labels{display: none;}
-
 	.card__header
 	{
 		margin-bottom: 23px;
 		height: 20px;
-
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-
 		font-size: 16px;
 		line-height: 20px;
 	}
@@ -60,31 +51,22 @@
 		padding: 0 10px;
 		background-color: rgba(255, 122, 0, 0.15);
 		border-radius: 5px;
-
 		font-size: 12px;
 		line-height: 25px;
 		color: #FF7A00;
 	}
-
 	.card__book-img-wpapper
 	{
 		height: 250px;
-		@media (max-width: $mobile)
-		{
-			height: 200px;
-		}
+		@media (max-width: $mobile) {height: 200px;}
 	}
-
 	.card__book-review{display: none;}
-
 	.card__button
-{
-	height: 40px;
-	@media (max-width: $mobile) {height: 40px;}
+	{
+		height: 40px;
+		@media (max-width: $mobile) {height: 40px;}
+	}
 }
-}
-
-
 //Labels-block
 .card__labels
 {
@@ -99,7 +81,6 @@
 	border-radius: 5px;
 	width: fit-content;
 	display: none;
-
 	font-family: $accent-font;
 	font-weight: $medium;
 	font-size: 12px;
@@ -123,12 +104,6 @@
 	color: #FF4F52;
 	display: block;
 }
-
-
-//Heading-block
-
-
-
 // IMG-block
 .card__book-img-wpapper
 {
@@ -136,17 +111,9 @@
 	display: flex;
 	justify-content: center;
 	height: 200px;
-	@media (max-width: $mobile)
-	{
-		height: 180px;
-	}
+	@media (max-width: $mobile) {height: 180px;}
 }
-.card__book-img
-{
-	height: auto;
-}
-
-
+.card__book-img {height: auto;}
 //Description-block
 .card__book-content
 {
@@ -173,23 +140,17 @@
 	font-weight: $regular;
 	font-size: 12px;
 	line-height: 15px;
-
 	letter-spacing: -0.1px;
 	color: rgba(28, 41, 77, 0.8);
-	;
 	opacity: 0.8;
 }
-
-
 //Price-block
 .card__price-block
 {
 	display: flex;
 	align-items: end;
-
 	font-weight: $regular;
 	font-size: 12px;
-
 	& > * + * {margin-left: 7px;}
 }
 .card__book-price
@@ -197,7 +158,6 @@
 	font-weight: $bold;
 	font-size: 18px;
 	line-height: 20px;
-
 	&--red{color: #FD3A3A;}
 }
 .card__book-price-old
@@ -206,9 +166,7 @@
 	color: rgba(28, 41, 77, 0.5);
 	position: relative;
 	display: none;
-
 	&--active {display: block;}
-
 	&--active::before
 	{
 		content: "";
@@ -226,20 +184,14 @@
 {
 	line-height: 14px;
 	color: #0DB98C;
-
 	&--active {display: block;}
-
 	@media (max-width: $mobile){display: none;}
 }
-
-
 //Reiting-block
 .card__book-review
 {
 	display: flex;
-
 	> * + * {margin-left: 10px;}
-
 	@media (max-width: $mobile)
 	{
 		flex-direction: column;
@@ -257,18 +209,15 @@
 	align-items: end;
 	border-radius: 5px;
 	width: fit-content;
-
 	font-family: $accent-font;
 	font-weight: $medium;
 	font-size: 12px;
-
 	& span{margin-left: 5px;}
 }
 .card__book-stars
 {
 	padding: 5px 8px;
 	background-color: #FBC02D80;
-
 	line-height: 13px;
 	color: #FFA34D;
 }
@@ -276,30 +225,18 @@
 {
 	padding: 5px 10px;
 	background-color: #7986CB80;
-
 	line-height: 12px;
 	color: #7986CB;
 }
-
-
 // Buttons-block
 .card__bottom
 {
 	display: flex;
-
-	& > * + *
-	{
-		margin-left: 10px;
-	}
-
+	& > * + * {margin-left: 10px;}
 	@media (max-width: $mobile)
 	{
-		& > * + *
-		{
-			margin-left: 5px;
-		}
+		& > * + * {margin-left: 5px;}
 	}
-
 }
 .card__button
 {
@@ -309,7 +246,6 @@
 	border: 1px solid #EEEEEE;
 	border-radius: 5px;
 	background-color: #fff;
-
 	@media (max-width: $mobile)
 	{
 		padding: 8px;
@@ -319,24 +255,19 @@
 .card__button--cart {
 	padding: 10px 25px;
 	line-height: 15px;
-
 	@media (max-width: $mobile)
 	{
 		width: 100%;
 		justify-content: center;
 		padding: 8px 11px;
 	}
-
 	.cart-icon
 	{
 		width: 20px;
 		height: 20px;
 		margin-right: 10px;
 		fill: #FF7A00;
-		@media (max-width: $mobile)
-		{
-			margin-right: 5px;
-		}
+		@media (max-width: $mobile) {margin-right: 5px;}
 	}
 }
 .card__button--bookmark

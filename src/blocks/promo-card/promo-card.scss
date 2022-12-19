@@ -18,9 +18,9 @@
 
 .promo-card__text
 {
-	padding-right: 35%;
 	position: relative;
 	z-index: 1;
+	text-align: left;
 	font-family: 'Gosha Sans', sans-serif;
 	font-style: normal;
 	font-weight: 600;
@@ -44,8 +44,8 @@
 	{
 		position: absolute;
 		z-index: -1;
-		bottom: 0;
-		left: 8%;
+		bottom: -1px;
+		left: 20px;
 	}
 }
 .promo-card__img

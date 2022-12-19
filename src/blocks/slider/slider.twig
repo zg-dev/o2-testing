@@ -1,21 +1,19 @@
-<div class="slider">
-	<div id="slides" class="slider__viewport">
-		<div id="slide_1" class="slider__item">
-			<img srcset="img/2=3.webp" class="slider__img" src="img/2=3.jpg" alt="2=3">
-		</div>
-		<div id="slide_2" class="slider__item">
-			<img srcset="img/2=3.webp" class="slider__img" src="img/2=3.jpg" alt="2=3">
-		</div>
-		<div id="slide_3" class="slider__item">
-			<img srcset="img/2=3.webp" class="slider__img" src="img/2=3.jpg" alt="2=3">
-		</div>
+<div class="slider _slider">
+	<div id="slide_1" class="slider__item _slider__item">
+		<img srcset="img/library.webp" class="slider__img" src="img/library.jpg" alt="2=3">
 	</div>
-	<button onclick="clickWatch()" type="submit" class="slider__button slider__button--right">
+	<div id="slide_2" class="slider__item _slider__item">
+		<img srcset="img/2=3.webp" class="slider__img" src="img/2=3.jpg" alt="2=3">
+	</div>
+	<div id="slide_3" class="slider__item _slider__item">
+		<img srcset="img/2=3.webp" class="slider__img" src="img/2=3.jpg" alt="2=3">
+	</div>
+	<button type="submit" class="slider__button slider__button--right _slider__button--right">
 		<div class="button__chevron-mask">
 			{% include "assets/svg/chevron.svg" %}
 		</div>
 	</button>
-	<button onclick="clickWatch()" type="submit" class="slider__button slider__button--left">
+	<button type="submit" class="slider__button slider__button--left _slider__button--left">
 		<div class="button__chevron-mask button__chevron-mask--left">
 			{% include "assets/svg/chevron.svg" %}
 		</div>
