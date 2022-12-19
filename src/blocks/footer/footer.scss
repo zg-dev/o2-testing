@@ -89,8 +89,14 @@
 		padding: 20px 0;
 		line-height: 20px;
 		color: rgba(28, 41, 77, 0.5);
+		border-top: 1px solid rgba(40, 47, 54, 0.15);
 		border-bottom: 1px solid rgba(40, 47, 54, 0.15);
 		> * + * {margin-top: 10px;}
+		> *
+		{
+			display: block;
+			padding: 0 10px;
+		}
 	}
 }
 
