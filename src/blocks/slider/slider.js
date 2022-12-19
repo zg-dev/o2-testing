@@ -5,6 +5,7 @@ const slides = Array.from(document.querySelectorAll('._slider__item'));
 const btnRight = document.querySelector('._slider__button--right');
 const btnLeft = document.querySelector('._slider__button--left');
 
+
 let visibleSlide = 0;
 const slidesNumber = slides.length;
 
@@ -14,26 +15,33 @@ const slidesMove = function(slide) {
 
 slidesMove(0);
 
-btnRight.addEventListener('click', function() {
-	if (visibleSlide === slidesNumber - 1) {
-		visibleSlide = 0;
-	} else {
-		visibleSlide++;
-	};
-	slidesMove(visibleSlide);
+const nextSlide = function() {
+	btnRight.addEventListener('click', function() {
+		if (visibleSlide === slidesNumber - 1) {
+			visibleSlide = 0;
+		} else {
+			visibleSlide++;
+		};
+		slidesMove(visibleSlide);
 
-	console.log('click');
-	console.log(visibleSlide);
-});
+		console.log('click');
+		console.log(visibleSlide);
+	});
+};
 
-btnLeft.addEventListener('click', function() {
-	if (visibleSlide === 0) {
-		visibleSlide = slidesNumber - 1;
-	} else {
-		visibleSlide--;
-	};
-	slidesMove(visibleSlide);
+const prevSlide = function() {
+	btnLeft.addEventListener('click', function() {
+		if (visibleSlide === 0) {
+			visibleSlide = slidesNumber - 1;
+		} else {
+			visibleSlide--;
+		};
+		slidesMove(visibleSlide);
 
-	console.log('click');
-	console.log(visibleSlide);
-});
+		console.log('click');
+		console.log(visibleSlide);
+	});
+}
+
+nextSlide();
+prevSlide();
