@@ -1,4 +1,4 @@
-.promo-card
+.promocard
 {
 	padding: 32px 25px;
 	border-radius: 5px;
@@ -7,18 +7,18 @@
 	width: 100%;
 	height: 100%;
 }
-.promo-card--shipping
+.promocard--shipping
 {
 	background-color: #6D378F;
 	color: #FFFFFF;
 }
-.promo-card--sign-up
+.promocard--sign-up
 {
 	background-color: #FFD8EF;
 	color: #494C6D;
 }
 
-.promo-card__text
+.promocard__text
 {
 	position: relative;
 	z-index: 1;
@@ -50,7 +50,7 @@
 		left: 20px;
 	}
 }
-.promo-card__img
+.promocard__img
 {
 	position: absolute;
 	top: 50%;
