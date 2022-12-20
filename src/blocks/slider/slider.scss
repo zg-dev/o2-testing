@@ -5,11 +5,7 @@
 	position: relative;
     width: 100%;
     height: 100%;
-
-
-	&:hover{transform: translateY(10px);}
-	&:focus{transform: translateY(10px);}
-	&:target{transform: translateY(10px);}
+	aspect-ratio: 2.1 / 1;
 }
 .slider__item
 {
@@ -39,7 +35,11 @@
 	outline: none;
 	border: none;
 	border-radius: 5px;
-	@media (max-width: $mobile) {display: none;}
+	@media (max-width: $mobile)
+	{
+		top: 0;
+		height: 100%;
+	}
 	&:hover
 	{
 		background-color: #5656564d;
@@ -59,6 +59,7 @@
 	justify-content: center;
 	&--left
 	{transform: rotate(180deg);}
+	@media (max-width: $mobile) {display: none;}
 }
 .chevron-icon--slider
 {
@@ -78,10 +79,12 @@
 {
 	height: 2px;
 	width: 25px;
+	border: none;
 	border-radius: 2px;
+	cursor: pointer;
 	background-color: #fff;
-	opacity: 1;
-	transition: 0.9s ease-in;
+	opacity: 0.3;
+	transition: 0.2s ease-in;
 
 	&--active{opacity: 1;}
 }

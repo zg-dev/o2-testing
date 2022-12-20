@@ -10,7 +10,7 @@
 		margin-bottom: 10px;
 		grid-gap: 10px;
 		grid-template-columns: 1fr;
-		grid-template-rows: 175px 464px 140px 140px;
+		grid-template-rows: minmax(175px, auto) 464px 140px 140px;
 	}
 }
 .top-section__slider
