@@ -31,50 +31,32 @@
 		<div class="header__bottom-wrapper">
 			<div class="header__bottom-leftside">
 				{% include "blocks/logo/logo.twig" %}
-				<div class="search-form__wrapper">
-					{% include "blocks/search-form/search-form.twig" %}
-				</div>
+				{% include "blocks/search-form/search-form.twig" %}
 			</div>
 
-			<div class="header__bottom-rightside">
-				{% include "blocks/profile/profile.twig" %}
-			</div>
+			{% include "blocks/profile/profile.twig" %}
 		</div>
 		<div class="header__nav">
-			<ul class="header__nav-list">
-				<li class="header__nav-list-item">
-					<a href="#" class="header__nav-link">
-						{% include '/assets/svg/burger.svg' %}
-						<span>Каталог</span>
-					</a>
-				</li>
-				<li class="header__nav-list-item">
-					<a href="#" class="header__nav-link">
-						<span>Авторы</span>
-					</a>
-				</li>
-				<li class="header__nav-list-item">
-					<a href="#" class="header__nav-link">
-						<span>Новинки</span>
-					</a>
-				</li>
-				<li class="header__nav-list-item">
-					<a href="#" class="header__nav-link header__nav-link--red-link">
-						{% include '/assets/svg/sale.svg' %}
-						<span>Скидки</span>
-					</a>
-				</li>
-				<li class="header__nav-list-item">
-					<a href="#" class="header__nav-link">
-						<span>Партнёрам</span>
-					</a>
-				</li>
-				<li class="header__nav-list-item">
-					<a href="#" class="header__nav-link">
-						<span>Мы</span>
-					</a>
-				</li>
-			</ul>
+			<a href="#" class="header__nav-link">
+				{% include '/assets/svg/burger.svg' %}
+				<span>Каталог</span>
+			</a>
+			<a href="#" class="header__nav-link">
+				<span>Авторы</span>
+			</a>
+			<a href="#" class="header__nav-link">
+				<span>Новинки</span>
+			</a>
+			<a href="#" class="header__nav-link header__nav-link--red-link">
+				{% include '/assets/svg/sale.svg' %}
+				<span>Скидки</span>
+			</a>
+			<a href="#" class="header__nav-link">
+				<span>Партнёрам</span>
+			</a>
+			<a href="#" class="header__nav-link">
+				<span>Мы</span>
+			</a>
 		</div>
 	</div>
 

@@ -64,17 +64,19 @@
 .header__bottom-leftside
 {
 	width: 100%;
+	max-width: 653px;
+	margin-right: 30px;
 	display: flex;
 	justify-content: flex-start;
 	&> * + * {margin-left: 30px;}
 }
-.header__nav {@media (max-width: 768px) {display: none;}}
-.header__nav-list
+.header__nav
 {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	& > * + * {margin-left: 25px;}
+	@media (max-width: 768px) {display: none;}
 }
 .header__nav-link
 {
