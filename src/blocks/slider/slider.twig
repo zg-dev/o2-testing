@@ -1,23 +1,23 @@
 <div class="slider _slider">
-	<div id="slide_1" class="slider__item _slider__item">
+	<div  ontouchmove="o2.slider.touchStart()" class="slider__item _slider__item">
 		<img srcset="img/library.webp" class="slider__img" src="img/library.jpg" alt="2=3">
 	</div>
-	<div id="slide_2" class="slider__item _slider__item">
+	<div class="slider__item _slider__item">
 		<img srcset="img/2=3.webp" class="slider__img" src="img/2=3.jpg" alt="2=3">
 	</div>
-	<div id="slide_3" class="slider__item _slider__item">
+	<div class="slider__item _slider__item">
 		<img srcset="img/2=3.webp" class="slider__img" src="img/2=3.jpg" alt="2=3">
 	</div>
-	<button type="submit" class="slider__button slider__button--right _slider__button--right">
+	<button type="submit" onclick="o2.slider.nextSlide()" class="slider__button slider__button--right _slider__button--right">
 		<div class="slider__button-mask">
 			{% include "assets/svg/chevron.svg" %}
 		</div>
 	</button>
-	<button type="submit" class="slider__button slider__button--left _slider__button--left">
+	<button type="submit" onclick="o2.slider.prevSlide()" class="slider__button slider__button--left _slider__button--left">
 		<div class="slider__button-mask slider__button-mask--left">
 			{% include "assets/svg/chevron.svg" %}
 		</div>
 	</button>
-	<div class="slider__dot-list _slider__dot-list">
+	<div onclick="o2.slider.dotsClick()" class="slider__dot-list _slider__dot-list">
 	</div>
 </div>

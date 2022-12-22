@@ -39,10 +39,11 @@
 	{
 		width: 30%;
 		height: 100%;
+		display: none;
 	}
 	&:hover
 	{
-		background-color: #5656564d;
+		background-color: rgba(86, 86, 86, 0.199);
 		transition: 0.3s ease-in;
 	}
 }
@@ -77,7 +78,7 @@
 }
 .slider__dot
 {
-	height: 2px;
+	height: 5px;
 	width: 25px;
 	border: none;
 	border-radius: 2px;

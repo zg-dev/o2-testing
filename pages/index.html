@@ -197,30 +197,30 @@
 			<div class="top-section">
 				<div class="top-section__slider">
 					<div class="slider _slider">
-						<div id="slide_1" class="slider__item _slider__item">
+						<div ontouchmove="o2.slider.touchStart()" class="slider__item _slider__item">
 							<img srcset="img/library.webp" class="slider__img" src="img/library.jpg" alt="2=3">
 						</div>
-						<div id="slide_2" class="slider__item _slider__item">
+						<div class="slider__item _slider__item">
 							<img srcset="img/2=3.webp" class="slider__img" src="img/2=3.jpg" alt="2=3">
 						</div>
-						<div id="slide_3" class="slider__item _slider__item">
+						<div class="slider__item _slider__item">
 							<img srcset="img/2=3.webp" class="slider__img" src="img/2=3.jpg" alt="2=3">
 						</div>
-						<button type="submit" class="slider__button slider__button--right _slider__button--right">
+						<button type="submit" onclick="o2.slider.nextSlide()" class="slider__button slider__button--right _slider__button--right">
 							<div class="slider__button-mask">
 								<svg class="chevron-icon chevron-icon--slider" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M6.9107 4.41107C7.23614 4.08563 7.76378 4.08563 8.08921 4.41107L13.0892 9.41107C13.4147 9.73651 13.4147 10.2641 13.0892 10.5896L8.08921 15.5896C7.76378 15.915 7.23614 15.915 6.9107 15.5896C6.58527 15.2641 6.58527 14.7365 6.9107 14.4111L11.3214 10.0003L6.9107 5.58958C6.58527 5.26414 6.58527 4.73651 6.9107 4.41107Z" fill="#1C294D" />
 								</svg>
 							</div>
 						</button>
-						<button type="submit" class="slider__button slider__button--left _slider__button--left">
+						<button type="submit" onclick="o2.slider.prevSlide()" class="slider__button slider__button--left _slider__button--left">
 							<div class="slider__button-mask slider__button-mask--left">
 								<svg class="chevron-icon chevron-icon--slider" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M6.9107 4.41107C7.23614 4.08563 7.76378 4.08563 8.08921 4.41107L13.0892 9.41107C13.4147 9.73651 13.4147 10.2641 13.0892 10.5896L8.08921 15.5896C7.76378 15.915 7.23614 15.915 6.9107 15.5896C6.58527 15.2641 6.58527 14.7365 6.9107 14.4111L11.3214 10.0003L6.9107 5.58958C6.58527 5.26414 6.58527 4.73651 6.9107 4.41107Z" fill="#1C294D" />
 								</svg>
 							</div>
 						</button>
-						<div class="slider__dot-list _slider__dot-list">
+						<div onclick="o2.slider.dotsClick()" class="slider__dot-list _slider__dot-list">
 						</div>
 					</div>
 				</div>
