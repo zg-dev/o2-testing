@@ -88,6 +88,7 @@ o2.slider = {
 	dot: document.querySelector('._slider__dot'),
 	visibleSlide: 0, //задаем начальное значение
 
+
 	// выстраиваем слайды в линию, задаем смещение на ширину слайда в зависимости от его индекса
 	slidesMove (slide) {
 		this.slides.forEach((s, index) =>
@@ -98,7 +99,7 @@ o2.slider = {
 	createDots () {
 		this.slides.forEach(function(_, index) {
 			o2.slider.dotsList.insertAdjacentHTML('beforeend',
-			`<button class="slider__dot _slider__dot"
+			`<button onclick="o2.slider.dotsClick(event)" class="slider__dot _slider__dot"
 			data-slide="${index}"></button>`)
 		});
 	},
@@ -135,7 +136,7 @@ o2.slider = {
 	},
 
 	// перемещение по клику на dots
-	dotsClick (e) {
+	dotsClick () {
 		if(event.target.classList.contains('_slider__dot')) {
 			const slide = +event.target.dataset.slide;
 			this.slidesMove(slide);
@@ -144,42 +145,27 @@ o2.slider = {
 		};
 	},
 
-	// touchStart () {
-	// 	// touchstartX = event.changedTouches[0].screenX;
-	// 	alert('touchStart');
-	// },
+	// swipe
+	firstTouch: null,
+	progressTouch: null,
+	x1: null,
+	x2: null,
 
-	touchStart (event) {
-		let x = event.touches[0].clientX;
-		alert(x);
+	touchStart () {
+		this.firstTouch = event.changedTouches[0].clientX;
+		x1 = this.firstTouch;
 	},
-
-	// handSwipe() {
-	// 	if (touchendX < touchstartX) {
-	// 		o2.slider.nextSlide();
-	// 	};
-	// 	if (touchendX > touchstartX) {
-	// 		o2.slider.prevSlide();
-	// 	};
-	// },
-
-	// document.querySelector('._slider').addEventListener('touchstart', function (event) {
-	// 	touchstartX = event.changedTouches[0].screenX;
-	// }, false);
-
-	// document.querySelector('._slider').addEventListener('touchend', function (event) {
-	// 	touchendX = event.changedTouches[0].screenX;
-	// 	handleGesture();
-	// }, false);
-
-	// function handleGesture() {
-	// 	if (touchendX < touchstartX) {
-	// 		o2.slider.nextSlide();
-	// 	};
-	// 	if (touchendX > touchstartX) {
-	// 		o2.slider.prevSlide();
-	// 	};
-	// };
+	touchEnd () {
+		this.progressTouch = event.changedTouches[0].clientX;
+		x2 = this.progressTouch;
+		if (!x1 || !x2) {
+			false
+		} else {
+			(x2 > x1) ? this.prevSlide()
+			: (x2 < x1) ? this.nextSlide()
+			: false
+		};
+	},
 
 
 
@@ -187,24 +173,3 @@ o2.slider = {
 o2.slider.slidesMove(0); // задаем первый отображаемый слайд
 o2.slider.createDots(); // создаем dots'ы
 o2.slider.activateDots(0); // задаем '--active' первой 'dot'
-
-
-
-// document.querySelector('._slider').addEventListener('touchstart', function (event) {
-// 	touchstartX = event.changedTouches[0].screenX;
-// }, false);
-
-// document.querySelector('._slider').addEventListener('touchend', function (event) {
-// 	touchendX = event.changedTouches[0].screenX;
-// 	handleGesture();
-// }, false);
-
-// function handleGesture() {
-// 	if (touchendX < touchstartX) {
-// 		o2.slider.nextSlide();
-// 	};
-// 	if (touchendX > touchstartX) {
-// 		o2.slider.prevSlide();
-// 	};
-// };
-
