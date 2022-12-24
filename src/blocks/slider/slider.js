@@ -138,7 +138,7 @@ o2.slider = {
 	// перемещение по клику на dots
 	dotsClick () {
 		if(event.target.classList.contains('_slider__dot')) {
-			const slide = +event.target.dataset.slide;
+			const slide = +event.target.dataset.slide; // присваиваем значение "slide[index]" пременной и предаем его аргументом след. функциям
 			this.slidesMove(slide);
 			this.activateDots(slide);
 			this.visibleSlide = slide;
@@ -151,21 +151,27 @@ o2.slider = {
 	x1: null,
 	x2: null,
 
+	// определяем начальную точку касания экрана
 	touchStart () {
 		this.firstTouch = event.changedTouches[0].clientX;
 		x1 = this.firstTouch;
 	},
+	// определяем конечную точку свайпа
 	touchEnd () {
 		this.progressTouch = event.changedTouches[0].clientX;
 		x2 = this.progressTouch;
-		if (!x1 || !x2) {
+		if (!x1 || !x2) { // если  точек нет -> false
 			false
 		} else {
 			(x2 > x1) ? this.prevSlide()
 			: (x2 < x1) ? this.nextSlide()
 			: false
 		};
+		// обнуляем значения переменных
+		x1 = null;
+		x2 = null;
 	},
+
 
 
 
