@@ -7,7 +7,7 @@
 	width: 100%;
 	background-color: #fff;
 
-	font-family: $accent-font;
+	font-family: $main-font;
 	font-weight: $regular;
 	font-size: $mainFontSize;
 	line-height: $mainLineHeight;
@@ -86,8 +86,8 @@
 }
 .header__nav-link--red-link > *
 {
-	color: #FF283D;
-	fill: #FF283D;
+	color: $accent-color;
+	fill: $accent-color;
 }
 
 

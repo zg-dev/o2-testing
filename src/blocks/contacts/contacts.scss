@@ -2,7 +2,7 @@
 {
 	display: flex;
 
-	font-family: $accent-font;
+	font-family: $main-font;
 	font-weight: $medium;
 	font-size: $mainFontSize;
 	line-height: $mainLineHeight;
@@ -79,7 +79,7 @@
 	opacity: 0;
 	transition: 0.5s;
 
-	font-family: $accent-font;
+	font-family: $main-font;
 	font-weight: $medium;
 	font-size: $mainFontSize;
 	line-height: $mainLineHeight;

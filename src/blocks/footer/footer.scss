@@ -1,6 +1,6 @@
 .footer
 {
-	font-family: $accent-font;
+	font-family: $main-font;
 	font-weight: $mainFontWeight;
 	font-size: $mainFontSize;
 	line-height: $mainLineHeight;
@@ -21,7 +21,6 @@
 			top: 50%;
 			left: 0;
 			width: 100%;
-			// z-index: -1;
 			height: 1px;
 			background-color: rgba(28, 41, 77, 0.15);
 		}

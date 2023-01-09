@@ -7,7 +7,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	position: relative;
-	font-family: $accent-font;
+	font-family: $main-font;
 	font-weight: $medium;
 	font-size: $mainFontSize;
 	line-height: 20px;
@@ -91,7 +91,7 @@
 	border-radius: 5px;
 	width: fit-content;
 	display: none;
-	font-family: $accent-font;
+	font-family: $main-font;
 	font-weight: $medium;
 	font-size: 12px;
 	line-height: 25px;
@@ -111,7 +111,7 @@
 .card__label--sale
 {
 	background-color: #FFEEEE;
-	color: #FF4F52;
+	color: $accent-color;
 	display: block;
 }
 // IMG-block
@@ -220,7 +220,7 @@
 	align-items: end;
 	border-radius: 5px;
 	width: fit-content;
-	font-family: $accent-font;
+	font-family: $main-font;
 	font-weight: $medium;
 	font-size: 12px;
 	& span{margin-left: 5px;}

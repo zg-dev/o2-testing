@@ -75,6 +75,7 @@ o2.slider = {
 	touchStart() {
 		this.firstTouch = event.changedTouches[0].clientX;
 		x1 = this.firstTouch;
+		console.log(event);
 	},
 	// определяем конечную точку свайпа
 	touchEnd() {
@@ -91,9 +92,6 @@ o2.slider = {
 		x1 = null;
 		x2 = null;
 	},
-
-
-
 
 };
 o2.slider.slidesMove(0); // задаем первый отображаемый слайд

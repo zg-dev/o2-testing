@@ -11,21 +11,14 @@ body{background-color: #F9F9FA;}
 
 	@media (max-width: $mobile)
 	{
-		padding: 0 10px;	
+		padding: 0 10px;
 	}
 }
 a
 {
-	border-radius: 3px;
 	transition: all 0.2s ease-in;
 }
 a:hover
 {
-	background-color: #bdbdcb5a;
-	transform: scale3d(1.1, 1.2, 1.8);
-	box-shadow: 2px 2px 5px #bdbdcb5a;
-}
-a:focus
-{
-	outline: 1px solid #767686;
+	color: $accent-color;
 }

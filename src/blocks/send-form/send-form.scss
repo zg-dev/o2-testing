@@ -13,7 +13,7 @@
 	background: #FFFFFF;
 	border: 1px solid rgba(40, 47, 54, 0.15);
 	border-radius: 5px 0 0 5px;
-	font-family: $accent-font;
+	font-family: $main-font;
 	font-weight: $mainFontWeight;
 	font-size: 14px;
 	line-height: 20px;
@@ -21,7 +21,7 @@
 }
 .send-form__input::placeholder
 {
-	font-family: $accent-font;
+	font-family: $main-font;
 	font-weight: $mainFontWeight;
 	font-size: 14px;
 	line-height: 20px;
