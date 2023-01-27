@@ -1,99 +1,96 @@
 o2.slider = {
+    visibleSlide: 0,
 
-	slider: document.querySelector('._slider'),
-	slides: Array.from(document.querySelectorAll('._slider__item')),
-	btnRight: document.querySelector('._slider__button--right'),
-	btnLeft: document.querySelector('._slider__button--left'),
-	dotsList: document.querySelector('._slider__dot-list'),
-	dot: document.querySelector('._slider__dot'),
-	visibleSlide: 0, //задаем начальное значение
+    // задаем смещение на ширину слайда в зависимости от видимого
+    slidesMove(slides, el)
+    {
+        slides.forEach((s) =>
+            (s.style.transform = `translateX(${((0 - el) * 100)}%)`));
+    },
 
+    // создаем пагинацию в зависимости от колич слайдов
+    createDots()
+    {
+        const $this = this;
+        document.querySelectorAll('._slider').forEach(function(slider)
+        {
+            let $slides = slider.querySelectorAll('._slider__item');
+            let $dotsList = slider.querySelector('._slider__dot-list');
+            $slides.forEach(function (_, index) {
+                $dotsList.insertAdjacentHTML('beforeend',
+                `<button onclick="o2.slider.dotsClick(this)" class="slider__dot _slider__dot"
+                data-slide="${index}"></button>`);
+            });
 
-	// выстраиваем слайды в линию, задаем смещение на ширину слайда в зависимости от его индекса
-	slidesMove(slide) {
-		this.slides.forEach((s, index) =>
-			(s.style.transform = `translateX(${((index - slide) * 100)}%)`));
-	},
+            $this.setActiveDot(slider, 0);
+        });
+    },
 
-	// создаем пагинацию в зависимости от колич слайдов
-	createDots() {
-		this.slides.forEach(function (_, index) {
-			o2.slider.dotsList.insertAdjacentHTML('beforeend',
-				`<button onclick="o2.slider.dotsClick(event)" class="slider__dot _slider__dot"
-			data-slide="${index}"></button>`)
-		});
-	},
+    // упарвление классом '--active' для пагинации
+    setActiveDot(slider, slide = null)
+    {
+        let $dots = [...slider.querySelectorAll('._slider__dot')];
+        $dots.forEach((dot) => dot.classList.remove('slider__dot--active'));
+        slider.querySelector(`._slider__dot[data-slide="${slide}"]`).classList.add('slider__dot--active');
+    },
 
-	// упарвление классом '--active' для пагинации
-	activateDots(slide) {
-		document.querySelectorAll('._slider__dot').
-			forEach(dot => dot.classList.remove('slider__dot--active'));
+    // перемещение на след слайд
+    nextSlide(instance)
+    {
+        const $slider = instance.closest('._slider');
+        let $slides = [...$slider.querySelectorAll('._slider__item')];
+        if (this.visibleSlide === $slides.length - 1) {
+            this.visibleSlide = 0;// перемещение к первому слайду
+        } else {
+            this.visibleSlide++;
+        };
+        this.slidesMove($slides, this.visibleSlide);
+        this.setActiveDot($slider, this.visibleSlide);
+    },
 
-		document.querySelector(`._slider__dot[data-slide="${slide}"]`).
-			classList.add('slider__dot--active');
-	},
+    // перемещение на предыдущий слайд
+    prevSlide(instance)
+    {
+        const $slider = instance.closest('._slider')
+        let $slides = [...$slider.querySelectorAll('._slider__item')];
+        if (this.visibleSlide === 0) {
+            this.visibleSlide = $slides.length - 1;// перемещение к последнему слайду
+        } else {
+            this.visibleSlide--;
+        };
+        this.slidesMove($slides, this.visibleSlide);
+        this.setActiveDot($slider, this.visibleSlide);
+    },
 
-	// перемещение на след слайд
-	nextSlide() {
-		if (this.visibleSlide === this.slides.length - 1) {
-			this.visibleSlide = 0;// перемещение к первому слайду
-		} else {
-			this.visibleSlide++;
-		};
-		this.slidesMove(o2.slider.visibleSlide);
-		this.activateDots(o2.slider.visibleSlide);
-	},
+    // swipe
+    firstTouch: null,
+    progressTouch: null,
+    x1: null,
+    x2: null,
 
-	// перемещение на предыдущий слайд
-	prevSlide() {
-		if (this.visibleSlide === 0) {
-			this.visibleSlide = this.slides.length - 1;// перемещение к последнему слайду
-		} else {
-			this.visibleSlide--;
-		};
-		this.slidesMove(o2.slider.visibleSlide);
-		this.activateDots(o2.slider.visibleSlide);
-	},
+    // определяем начальную точку касания экрана
+    touchStart(instance)
+    {
+        const $slider = instance.closest('._slider')
+        $slider.firstTouch = event.changedTouches[0].clientX;
+        x1 = $slider.firstTouch;
+    },
 
-	// перемещение по клику на dots
-	dotsClick() {
-		if (event.target.classList.contains('_slider__dot')) {
-			const slide = +event.target.dataset.slide; // присваиваем значение "slide[index]" пременной и предаем его аргументом след. функциям
-			this.slidesMove(slide);
-			this.activateDots(slide);
-			this.visibleSlide = slide;
-		};
-	},
-
-	// swipe
-	firstTouch: null,
-	progressTouch: null,
-	x1: null,
-	x2: null,
-
-	// определяем начальную точку касания экрана
-	touchStart() {
-		this.firstTouch = event.changedTouches[0].clientX;
-		x1 = this.firstTouch;
-		console.log(event);
-	},
-	// определяем конечную точку свайпа
-	touchEnd() {
-		this.progressTouch = event.changedTouches[0].clientX;
-		x2 = this.progressTouch;
-		if (!x1 || !x2) { // если  точек нет -> false
-			false
-		} else {
-			(x2 > x1) ? this.prevSlide()
-				: (x2 < x1) ? this.nextSlide()
-					: false
-		};
-		// обнуляем значения переменных
-		x1 = null;
-		x2 = null;
-	},
-
-};
-o2.slider.slidesMove(0); // задаем первый отображаемый слайд
-o2.slider.createDots(); // создаем dots'ы
-o2.slider.activateDots(0); // задаем '--active' первой 'dot'
+    // определяем конечную точку свайпа
+    touchEnd(instance)
+    {
+        const $slider = instance.closest('._slider')
+        $slider.progressTouch = event.changedTouches[0].clientX;
+        x2 = $slider.progressTouch;
+        if (!x1 || !x2) { // если  точек нет -> false
+            false
+        } else {
+            (x2 > x1) ? this.prevSlide($slider) :
+            (x2 < x1) ? this.nextSlide($slider) :
+            false
+        };
+        // обнуляем значения переменных
+        x1 = null;
+        x2 = null;
+    },
+}

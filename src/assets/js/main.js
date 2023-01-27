@@ -17,6 +17,7 @@ const o2 =
 	 */
 	init()
 	{
+		this.slider.createDots();
 	},
 	/**
 	* отслеживание клика вне блока

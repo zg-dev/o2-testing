@@ -1,30 +1,19 @@
-<div ontouchstart="o2.slider.touchStart(event)"
-  ontouchend="o2.slider.touchEnd(event)"
-  class="slider _slider">
-  <div class="slider__item _slider__item">
-    <img class="slider__img"
-      src="img/library.jpg"
-      alt="Library" />
-  </div>
-  <div class="slider__item _slider__item">
-    <img class="slider__img"
-      src="img/2=3.jpg"
-      alt="2=3" />
-  </div>
-  <div class="slider__item _slider__item">
-    <img class="slider__img"
-      src="img/museum.jpg"
-      alt="Museum" />
-  </div>
+<div class="slider _slider" ontouchstart="o2.slider.touchStart(this)" ontouchend="o2.slider.touchEnd(this)">
+
+  {% for item in len %}
+    <div class="slider__item _slider__item"><img class="slider__img" src="img/library.jpg" alt="Library" />
+    </div>
+  {% endfor %}
+
   <button type="submit"
-    onclick="o2.slider.nextSlide()"
+    onclick="o2.slider.nextSlide(this)"
     class="slider__button slider__button--right _slider__button--right">
     <div class="slider__button-mask">
       {% include 'assets/svg/chevron.svg' with {'chevronModifier': 'chevron-icon--slider'} %}
     </div>
   </button>
   <button type="submit"
-    onclick="o2.slider.prevSlide()"
+    onclick="o2.slider.prevSlide(this)"
     class="slider__button slider__button--left _slider__button--left">
     <div class="slider__button-mask slider__button-mask--left">
       {% include 'assets/svg/chevron.svg' with {'chevronModifier': 'chevron-icon--slider'} %}
